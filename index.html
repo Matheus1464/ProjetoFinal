@@ -6,6 +6,7 @@
     <title>Consórcio Premium</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1><a href="index.html">Consórcio Premium</a></h1>
@@ -20,9 +21,21 @@
     </header>
 
     <section class="hero">
-        <h2>Consórcio Premium</h2>
+        <div class="carousel">
+            <div class="carousel-track">
+            <img src="Img/barco2.png" alt="img1" class="active">
+            <img src="Img/carro2.png" alt="img2">
+            <img src="Img/casa2.png" alt="img3">
+            <img src="Img/barco2.png" alt="img1" class="active">
+            <img src="Img/carro2.png" alt="img2">
+            <img src="Img/casa.png" alt="img3">
+            </div>
+        </div>
+        <div class="hero-content">
+        <h2>Consórcios Premium</h2>
         <p>Carros esportivos, motos, casas e embarcações de alto padrão — realize seus sonhos com planejamento e exclusividade.</p>
-        <a href="#" class="btn">Simule seu plano</a>
+        <a href="#" class="btn">Simule teu plano</a>
+        </div>
     </section>
 
     <section class="cards">
@@ -73,5 +86,18 @@
     <footer>
         <p>© 2025 Consórcio Premium - Todos os direitos reservados</p>
     </footer>
+
+    <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.carousel-track img');
+    let index = 0;
+
+    function nextSlide() {
+        index = (index + 1) % slides.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    setInterval(nextSlide, 4000);
+</script>
 </body>
 </html>
