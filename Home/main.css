@@ -147,7 +147,21 @@ header h1 a:hover {
 }
 
 /* 🔹 Responsividade */
-@media (max-width: 1000px) {
+@media (max-width: 787px) {
+
+    header{
+        padding: 0 20px;
+    }
+
+    header h1 a{
+        font-size: 1.1rem;
+    }
+
+    nav ul li{
+        font-size: 0.6rem;
+        margin-left: 15px;
+    }
+
     .hero-content h2 {
         font-size: 1.8rem;
     }
