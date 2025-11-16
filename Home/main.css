@@ -173,11 +173,11 @@ header h1 a:hover {
 
 .card {
     display: block;
+    height: 360px;
     background-color: #1b1b1b;
     border-radius: 30px;
     overflow: hidden;
     text-align: center;
-    padding-bottom: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     color: inherit;
@@ -211,13 +211,41 @@ header h1 a:hover {
     color: #ccc;
 }
 
-.card a {
-    color: #fff;
-    transition: color 0.3s;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
+.flip-card{
+    perspective: 1000px;
+    display: block;
+}
+
+.flip{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 30px;
+}
+
+.flip-card:hover .flip{
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back{
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.flip-back{
+    background-color: white;
+    transform: rotateY(180deg);
+    padding: 30px;
+    color: black;
+    text-align: center;
+}
+.card .flip-back p{
+    color: #0a0a0a;
 }
 
 .como-funciona {
