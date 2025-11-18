@@ -18,3 +18,11 @@ leftBtn.addEventListener('click', () => {
   current = (current - 1 + cards.length) % cards.length;
   showCard(current);
 });
+
+
+const toggleBtn = document.getElementById("toggleBtn");
+const drop = document.querySelector(".dropdown");
+
+toggleBtn.addEventListener("click", () => {
+  drop.classList.toggle("open");
+});

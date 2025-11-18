@@ -13,9 +13,17 @@
         <h1><a href="main.html">Magnata Consórcios</a></h1>
         <nav>
             <ul>
-                <li><a href="#">Concessionário</a></li>
+                <li class="dropdown">
+                    <button id="dropBtn"> Tipos de Consórcios <span class="arrow">▼</span></button>
+
+                    <ul class="drop-menu">
+                        <li><a href="#">Carros</a></li>
+                        <li><a href="#">Motos</a></li>
+                        <li><a href="#">Casas</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Contate-nos</a></li>
-                <li><a href="../Sobrenos/sobrenos.html">Sobre Nós</a></li>
+                <li><a href="../Sobrenos/sobrenos.html">Nossa Equipe</a></li>
             </ul>
         </nav>
     </header>
@@ -152,6 +160,15 @@
         }
 
         setInterval(nextSlide, 4000);
+
+
+        const dropBtn = document.querySelector("#dropBtn");
+        const dropdown = document.querySelector(".dropdown");
+
+        dropBtn.addEventListener("click", () => {
+            dropdown.classList.toggle("open");
+        });
+
     </script>
 </body>
 
