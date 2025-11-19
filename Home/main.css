@@ -344,6 +344,12 @@ nav ul li a:hover{
     color: #e50914;
     margin-bottom: 10px;
 }
+.texto-justificado {
+    text-align: justify;
+    max-width: 800px; /* ajuste como preferir */
+    margin: 0 auto;   /* centraliza o bloco na página */
+    line-height: 1.6; /* melhora a leitura */
+}
 
 footer {
     background-color: #111;
