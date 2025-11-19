@@ -329,6 +329,11 @@ nav ul li a:hover{
     margin-bottom: 40px;
 }
 
+.sobre-empresa {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #e25f08;
+}
 .steps {
     text-align: center;
 }
