@@ -19,6 +19,58 @@ header::after {
   width: 100%;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+  /* Mantém ele no header sem quebrar layout */
+}
+
+#dropBtn {
+  background-color: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.dropdown .s-arrow {
+  display: inline-block;
+  margin-left: 6px;
+  transition: transform 0.3 ease;
+}
+
+.drop-menu {
+  display: none;
+  background: #1d1d1d;
+  position: absolute;
+  top: 85%;
+  left: 0;
+  width: 80%;
+  padding: 0;
+  list-style: none;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.drop-menu li {
+  padding: 0 15px;
+}
+
+.drop-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Quando abrir */
+.dropdown.open .drop-menu {
+  display: block;
+}
+
+.dropdown.open .s-arrow {
+  transform: rotate(180deg);
+}
+
 header h1,
 nav {
   display: inline-block;
@@ -50,8 +102,9 @@ nav ul li a {
   transition: color 0.3s;
 }
 
-nav ul li a:hover,
-header h1 a:hover {
+header h1 a:hover,
+.dropdown:hover #dropBtn,
+nav ul li a:hover {
   color: #e50914;
 }
 
@@ -119,24 +172,24 @@ header h1 a:hover {
   font-family: "Josefin Sans", sans-serif;
 }
 
-span {
+.c-span {
   color: #f9004d;
 }
 
-.social{
+.social {
   margin-top: 20px;
   text-align: left;
   white-space: nowrap;
   text-align: center;
 }
 
-.social a{
+.social a {
   display: inline-block;
   margin-right: 15px;
   text-decoration: none;
 }
 
-.social img{
+.social img {
   width: 32px;
   height: 32px;
 }

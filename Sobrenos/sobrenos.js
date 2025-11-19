@@ -19,10 +19,11 @@ leftBtn.addEventListener('click', () => {
   showCard(current);
 });
 
+// --- DROPDOWN --- //
+const dropBtn = document.querySelector("#dropBtn");
+const dropdown = document.querySelector(".dropdown");
 
-const toggleBtn = document.getElementById("toggleBtn");
-const drop = document.querySelector(".dropdown");
-
-toggleBtn.addEventListener("click", () => {
-  drop.classList.toggle("open");
+dropBtn.addEventListener("click", () => {
+  dropdown.classList.toggle("open");
 });
+
