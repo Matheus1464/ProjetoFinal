@@ -27,7 +27,7 @@ header::after {
 
 .dropdown{
     position: relative;
-    display: inline-block; /* Mantém ele no header sem quebrar layout */
+    display: inline-block; 
 
 }
 
@@ -68,7 +68,7 @@ header::after {
     text-decoration: none;
 }
 
-/* Quando abrir */
+
 .dropdown.open .drop-menu {
     display: block;
 }
