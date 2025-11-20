@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Magnata Consórcios</title>
+    <link rel="stylesheet" href="contato.css">
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="../Home/main.html">Magnata Consórcios</a></h1>
+
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <button id="dropBtn"> Tipos de Consórcios <span class="arrow">▼</span></button>
+                    <ul class="drop-menu">
+                        <li><a href="#">Automóveis</a></li>
+                        <li><a href="#">Motos</a></li>
+                        <li><a href="#">Imóveis</a></li>
+                        <li><a href="#">Embarcações</a></li>
+                        <li><a href="#">Investimentos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contate-nos</a></li>
+                <li><a href="../Sobrenos/sobrenos.html">Nossa Equipe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <h2>Entre em Contato</h2>
+        <p>Estamos prontos para ajudá-lo a realizar seus objetivos. Preencha o formulário abaixo!</p>
+
+        <div class="contact-container">
+            
+            <div class="success-message" id="successMessage">
+                ✓ Mensagem enviada com sucesso! Entraremos em contato em breve.
+            </div>
+
+            <form id="contactForm" class="contact-form">
+
+                <div class="form-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" placeholder="(00) 0000-0000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp</label>
+                        <input type="tel" id="whatsapp" placeholder="(00) 00000-0000" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" required>
+                        <option value="">Selecione um assunto</option>
+                        <option value="duvidas">Dúvidas sobre consórcio</option>
+                        <option value="simulacao">Solicitar simulação</option>
+                        <option value="contemplacao">Informações sobre contemplação</option>
+                        <option value="suporte">Suporte técnico</option>
+                        <option value="outro">Outro assunto</option>
+                    </select>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="reuniao">
+                    <label for="reuniao">Desejo agendar uma reunião online</label>
+                </div>
+
+                <div class="form-group" id="dataReuniaoGroup" style="display: none;">
+                    <label for="dataReuniao">Data e horário preferencial para reunião</label>
+                    <input type="datetime-local" id="dataReuniao">
+                </div>
+
+                <div class="form-group textarea-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" placeholder="Descreva como podemos ajudá-lo..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <h3>Outros Canais de Atendimento</h3>
+            <div class="info-cards">
+                <div class="info-card">
+                    <span class="icon">📞</span>
+                    <h4>Telefone</h4>
+                    <p>(51) 3000-0000</p>
+                </div>
+                <div class="info-card">
+                    <span class="icon">💬</span>
+                    <h4>WhatsApp</h4>
+                    <p>(51) 99999-9999</p>
+                </div>
+                <div class="info-card">
+                    <span class="icon">📧</span>
+                    <h4>E-mail</h4>
+                    <p>contato@magnataconsorcios.com.br</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2025 Magnata Consórcios. CNPJ: 89.567.345/0001-12 - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        // Dropdown menu
+        const dropBtn = document.querySelector("#dropBtn");
+        const dropdown = document.querySelector(".dropdown");
+
+        dropBtn.addEventListener("click", () => {
+            dropdown.classList.toggle("open");
+        });
+
+        // Mostrar/ocultar campo de data da reunião
+        const reuniaoCheckbox = document.getElementById('reuniao');
+        const dataReuniaoGroup = document.getElementById('dataReuniaoGroup');
+        const dataReuniaoInput = document.getElementById('dataReuniao');
+
+        reuniaoCheckbox.addEventListener('change', () => {
+            if (reuniaoCheckbox.checked) {
+                dataReuniaoGroup.style.display = 'block';
+                dataReuniaoInput.required = true;
+            } else {
+                dataReuniaoGroup.style.display = 'none';
+                dataReuniaoInput.required = false;
+                dataReuniaoInput.value = '';
+            }
+        });
+
+        // Formulário de contato
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Mostrar mensagem de sucesso
+            successMessage.classList.add('show');
+            
+            // Limpar formulário
+            contactForm.reset();
+            dataReuniaoGroup.style.display = 'none';
+            
+            // Rolar para o topo
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Esconder mensagem após 5 segundos
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+        });
+    </script>
+
+</body>
+
+</html>
