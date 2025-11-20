@@ -14,39 +14,44 @@ body {
 }
 
 /* -------------------------------------------------------------------------
-    HEADER
+    HEADER (EXATO IGUAL AO DA OUTRA PÁGINA)
 ------------------------------------------------------------------------- */
+
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #111;
-    padding: 0px 50px;
+    padding: 0 50px;
     height: 78px;
-    text-align: justify;
-    line-height: 70px;
+    border-bottom: 1px solid #222;
 }
 
-header::after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-}
-
-header h1, nav {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-header a {
+header h1 a {
     color: white;
+    font-size: 28px;
+    font-weight: bold;
     text-decoration: none;
 }
 
-header a:hover {
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
     color: #e50914;
 }
 
-/* -------------------------------------------------------------------------
-    DROPDOWN
-------------------------------------------------------------------------- */
+/* DROPDOWN */
 .dropdown {
     position: relative;
 }
@@ -55,20 +60,47 @@ header a:hover {
     background: none;
     border: none;
     color: white;
+    font-size: 16px;
     cursor: pointer;
 }
 
-.drop-menu {
-    display: none;
-    position: absolute;
-    background: #1d1d1d;
-    border-radius: 10px;
-    margin-top: 5px;
+.arrow {
+    font-size: 14px;
+    margin-left: 3px;
 }
 
-.dropdown.open .drop-menu {
+.drop-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1d1d1d;
+    border-radius: 10px;
+    padding: 10px 0;
+    min-width: 180px;
+    display: none;
+    border: 1px solid #222;
+}
+
+.drop-menu li {
+    list-style: none;
+}
+
+.drop-menu a {
+    display: block;
+    padding: 10px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.drop-menu a:hover {
+    background: #222;
+    color: #e50914;
+}
+
+.dropdown:hover .drop-menu {
     display: block;
 }
+
 
 /* -------------------------------------------------------------------------
     ÁREA PRINCIPAL E LAYOUT
@@ -187,7 +219,7 @@ input,
 }
 
 /* -------------------------------------------------------------------------
-    BOX DE INFORMAÇÕES (VERSÃO ESCURA PARA COMBINAR COM O SITE)
+    BOX DE INFORMAÇÕES
 ------------------------------------------------------------------------- */
 .info-box {
     max-width: 450px;
@@ -205,7 +237,6 @@ input,
 
 .info-box ul {
     list-style: none;
-    padding: 0;
 }
 
 .info-box ul li {
@@ -219,10 +250,8 @@ input,
     content: "•";
     position: absolute;
     left: 0;
-    top: 0;
     color: #e50914;
     font-size: 20px;
-    line-height: 16px;
 }
 
 /* Segurança */
@@ -257,6 +286,18 @@ footer {
     RESPONSIVO
 ------------------------------------------------------------------------- */
 @media (max-width: 760px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .login-area,
     .client-area-container {
         flex-direction: column;
@@ -264,10 +305,7 @@ footer {
     }
 
     .login-box,
-    .client-area-card {
-        width: 100%;
-    }
-
+    .client-area-card,
     .info-box {
         width: 100%;
     }
