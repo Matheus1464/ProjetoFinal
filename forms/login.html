@@ -32,50 +32,47 @@
 
     <section class="login-area">
 
-        <div class="login-box">
+        <div class="client-area-container">
+            <div class="client-area-card">
+                <h2>Área do Cliente</h2>
+                <p class="subtitle">
+                    Acesse seus boletos, contratos digitais, acompanhamento de contemplações e muito mais.
+                </p>
 
-            <h2>Área do Cliente</h2>
-            <p>Acesse seus boletos, contratos digitais, extratos e mais.</p>
+                <form class="login-form">
+                    <label for="login">Login</label>
+                    <input type="text" id="login" name="login" placeholder="Digite seu CPF ou e-mail" required>
 
-            <form class="form-login">
-
-                <div class="form-group">
-                    <label for="user">Login / CPF</label>
-                    <input type="text" id="user" placeholder="Digite seu CPF ou e-mail" required>
-                </div>
-
-                <div class="form-group">
                     <label for="senha">Senha</label>
-                    <input type="password" id="senha" placeholder="Digite sua senha" required>
-                </div>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
 
-                <button type="submit" class="btn-login">Conectar</button>
+                    <div class="remember-me">
+                        <input type="checkbox" id="keep-logged" name="keep-logged">
+                        <label for="keep-logged">Manter-me conectado neste navegador</label>
+                    </div>
 
-                <div class="links">
+                    <button type="submit" class="btn-primary">Conectar</button>
+                </form>
+
+                <div class="extra-links">
                     <a href="#">Esqueci minha senha</a>
-                    <a href="#">Primeiro acesso</a>
+                    <a href="#">Ainda não tenho acesso</a>
                 </div>
-            </form>
-        </div>
-
-        <div class="info-box">
-
-            <h3>O que você encontra na Área do Cliente</h3>
-            <ul>
-                <li>Acesso aos boletos de pagamento</li>
-                <li>Consulta de contratos digitais</li>
-                <li>Extratos e movimentações do grupo</li>
-                <li>Comprovantes e documentos</li>
-                <li>Chat interno com atendimento</li>
-                <li>Envio de lances e acompanhamento de contemplações</li>
-            </ul>
-
-            <div class="secure">
-                <img src="../Img/cadeado.png" alt="Segurança">
-                <p>Ambiente seguro e criptografado • Dados protegidos pela LGPD</p>
             </div>
 
+            <div class="info-box">
+                <h3>Benefícios da Área do Cliente</h3>
+                <ul>
+                    <li>Acesso aos boletos de pagamento</li>
+                    <li>Consulta de contratos digitais</li>
+                    <li>Acompanhamento de contemplações</li>
+                    <li>Chat interno com suporte</li>
+                    <li>Atualização cadastral</li>
+                    <li>Download de documentos importantes</li>
+                </ul>
+            </div>
         </div>
+
 
     </section>
 
