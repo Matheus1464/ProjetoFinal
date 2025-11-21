@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -11,15 +10,25 @@ body {
     color: white;
 }
 
-
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: #111;
     padding: 0 50px;
     height: 78px;
+    text-align: justify;
+    line-height: 70px;
     border-bottom: 1px solid #222;
+}
+
+header::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+header h1,
+nav {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 header h1 a {
@@ -30,10 +39,12 @@ header h1 a {
 }
 
 nav ul {
-    display: flex;
-    gap: 30px;
     list-style: none;
-    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 30px;
 }
 
 nav a {
@@ -45,7 +56,6 @@ nav a {
 nav a:hover {
     color: #e50914;
 }
-
 
 .dropdown {
     position: relative;
@@ -74,6 +84,7 @@ nav a:hover {
     min-width: 180px;
     display: none;
     border: 1px solid #222;
+    z-index: 100;
 }
 
 .drop-menu li {
@@ -82,7 +93,7 @@ nav a:hover {
 
 .drop-menu a {
     display: block;
-    padding: 10px;
+    padding: 10px 15px;
     color: #ccc;
     text-decoration: none;
 }
@@ -96,19 +107,13 @@ nav a:hover {
     display: block;
 }
 
-
-
 .login-area,
 .client-area-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+    text-align: center;
     padding: 60px 20px;
     max-width: 1200px;
     margin: auto;
-    flex-wrap: wrap;
 }
-
 
 .login-box,
 .client-area-card {
@@ -118,6 +123,9 @@ nav a:hover {
     width: 360px;
     text-align: center;
     box-shadow: 0 0 18px rgba(229, 9, 20, 0.2);
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 20px 40px;
 }
 
 .login-box h2,
@@ -133,10 +141,10 @@ nav a:hover {
     margin-bottom: 25px;
 }
 
-
 .form-group,
 .login-form label {
     text-align: left;
+    display: block;
     margin-bottom: 12px;
     font-weight: bold;
 }
@@ -153,18 +161,23 @@ input,
     font-size: 15px;
 }
 
-
 .remember-me {
     margin-top: 15px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    text-align: left;
+}
+
+.remember-me input {
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
 .remember-me label {
     font-weight: normal;
+    display: inline-block;
+    vertical-align: middle;
 }
-
 
 .btn-login,
 .btn-primary {
@@ -185,7 +198,6 @@ input,
     background: #b0060f;
 }
 
-
 .links,
 .extra-links {
     margin-top: 15px;
@@ -205,7 +217,6 @@ input,
     color: #e50914;
 }
 
-
 .info-box {
     max-width: 450px;
     padding: 25px;
@@ -213,6 +224,9 @@ input,
     border-radius: 14px;
     border: 1px solid #222;
     color: #ddd;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 20px 40px;
 }
 
 .info-box h3 {
@@ -229,6 +243,7 @@ input,
     margin-bottom: 12px;
     font-size: 15px;
     position: relative;
+    text-align: left;
 }
 
 .info-box ul li::before {
@@ -239,23 +254,27 @@ input,
     font-size: 20px;
 }
 
-
 .secure {
-    display: flex;
-    align-items: center;
-    gap: 10px;
     background: #111;
     padding: 12px;
     border-radius: 10px;
     margin-top: 20px;
     border: 1px solid #222;
+    text-align: left;
 }
 
 .secure img {
     width: 28px;
     filter: brightness(0) invert(1);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
+.secure span {
+    display: inline-block;
+    vertical-align: middle;
+}
 
 footer {
     text-align: center;
@@ -267,26 +286,32 @@ footer {
 
 @media (max-width: 760px) {
     header {
-        flex-direction: column;
         height: auto;
         padding: 20px;
-        gap: 20px;
+        text-align: center;
+        line-height: normal;
     }
-
+    
+    header h1,
     nav {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: block;
     }
-
+    
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
     .login-area,
     .client-area-container {
-        flex-direction: column;
         padding: 30px 20px;
     }
-
+    
     .login-box,
     .client-area-card,
     .info-box {
         width: 100%;
+        display: block;
+        margin: 0 0 20px 0;
     }
 }
