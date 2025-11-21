@@ -84,6 +84,7 @@ nav ul li a:hover {
     left: 0;
     padding: 10px 0;
     border-radius: 8px;
+    z-index: 100;
 }
 
 .dropdown.open .drop-menu {
@@ -102,25 +103,34 @@ nav ul li a:hover {
     color: white;
 }
 
-/* -------- FORMULÁRIO -------- */
+/* -------- SEÇÃO DE FORMULÁRIO -------- */
 .form-section {
-    max-width: 800px;
+    max-width: 1400px;
     margin: 60px auto;
     text-align: center;
     padding: 20px;
 }
 
 .form-section h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 15px;
 }
 
-.form-section p {
+.form-section > p {
     font-size: 16px;
     color: #bbb;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
+/* Layout lado a lado */
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* -------- FORMULÁRIO -------- */
 .form-container {
     background-color: #111;
     padding: 35px;
@@ -174,6 +184,72 @@ textarea {
     background: #b0060f;
 }
 
+/* -------- SEÇÕES INFORMATIVAS -------- */
+.info-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background-color: #111;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.2);
+    transition: 0.3s;
+    text-align: left;
+}
+
+.info-card:hover {
+    box-shadow: 0 0 25px rgba(229, 9, 20, 0.4);
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e50914;
+}
+
+.info-icon {
+    font-size: 28px;
+}
+
+.info-header h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.info-content {
+    line-height: 1.8;
+}
+
+.info-content p {
+    color: #ccc;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.info-content p strong {
+    color: #e50914;
+}
+
+.regulamento-link {
+    display: inline-block;
+    color: #e50914;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.regulamento-link:hover {
+    color: #b0060f;
+    text-decoration: underline;
+}
+
 /* Rodapé */
 footer {
     background: #111;
@@ -181,4 +257,37 @@ footer {
     padding: 20px;
     color: #bbb;
     margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-container {
+        order: 1;
+    }
+    
+    .info-sidebar {
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0px 20px;
+    }
+    
+    .form-section {
+        padding: 15px;
+    }
+    
+    .form-container {
+        padding: 25px;
+    }
+    
+    .info-card {
+        padding: 20px;
+    }
 }
