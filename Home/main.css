@@ -356,10 +356,107 @@ nav ul li a:hover{
     line-height: 1.6; /* melhora a leitura */
 }
 
+/* -------- FOOTER -------- */
 footer {
     background-color: #111;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
     color: #bbb;
+    padding: 50px 20px 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #333;
+}
+
+/* Bloco de informações da empresa */
+.footer-info {
+    padding-right: 20px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    color: #e50914;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer-address {
+    line-height: 1.8;
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.footer-cnpj {
+    color: #777;
+    font-size: 13px;
+}
+
+/* Blocos de menu */
+.footer-block h4 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer-block ul {
+    list-style: none;
+}
+
+.footer-block ul li {
+    margin-bottom: 12px;
+}
+
+.footer-block ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.footer-block ul li a:hover {
+    color: #e50914;
+    transform: translateX(5px);
+}
+
+/* Linha de copyright */
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.footer-bottom p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .footer-info {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    footer {
+        padding: 40px 20px 20px;
+    }
 }
