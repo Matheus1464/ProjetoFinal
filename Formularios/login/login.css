@@ -12,7 +12,7 @@ body {
 
 header {
     background-color: #111;
-    padding: 0 50px;
+    padding: 0 15px;
     height: 78px;
     text-align: justify;
     line-height: 70px;
@@ -33,7 +33,8 @@ nav {
 
 header h1 a {
     color: white;
-    font-size: 28px;
+    font-size: 24px;
+    margin-left: 45px;
     font-weight: bold;
     text-decoration: none;
 }
@@ -51,6 +52,18 @@ nav a {
     color: white;
     text-decoration: none;
     font-size: 16px;
+}
+
+ul img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+ul img:hover{
+    filter: brightness(0) saturate(100%) invert(23%) sepia(92%) saturate(7487%) hue-rotate(357deg) brightness(93%) contrast(115%);
 }
 
 nav a:hover {
@@ -72,6 +85,7 @@ nav a:hover {
 .arrow {
     font-size: 14px;
     margin-left: 3px;
+    
 }
 
 .drop-menu {
