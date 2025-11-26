@@ -41,15 +41,14 @@
             <p>Acesse seus boletos, contratos digitais e atendimento exclusivo.</p>
 
             <form class="login-form">
-                <label>Email ou CPF</label>
-                <input type="text" placeholder="Digite seu login">
-
-                <label>Senha</label>
-                <input type="password" placeholder="Digite sua senha">
-
+                <label for="login">Login</label>
+                <input type="text" id="login" name="login" placeholder="Digite seu login">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+               
                 <div class="remember-me">
-                    <input type="checkbox" id="keep">
-                    <label for="keep">Manter-me conectado neste navegador</label>
+                    <label for="keep">Manter conectado</label>
+                    <input type="checkbox" id="keep" name="keep">
                 </div>
 
                 <button class="btn-login">Entrar</button>
