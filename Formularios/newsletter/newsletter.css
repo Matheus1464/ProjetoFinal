@@ -337,19 +337,19 @@ footer {
 
 .footer-block ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-block ul li {
+    display: block;     /* força ficar um embaixo do outro */
     margin-bottom: 12px;
 }
 
 .footer-block ul li a {
-    color: #bbb;
-    text-decoration: none;
-    font-size: 15px;
-    transition: 0.3s;
-    display: inline-block;
+    display: inline-block; /* pode manter, não causa problema */
 }
+
 
 .footer-block ul li a:hover {
     color: #e50914;
@@ -388,18 +388,4 @@ footer {
     footer {
         padding: 40px 20px 20px;
     }
-}
-
-/* Mensagem de sucesso */
-.success-message {
-    background-color: #1b5e20;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    display: none;
-}
-
-.success-message.show {
-    display: block;
 }
