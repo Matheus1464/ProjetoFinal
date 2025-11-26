@@ -17,6 +17,7 @@ header {
     height: 78px;
     text-align: justify;
     line-height: 70px;
+    border-bottom: 1px solid #222;
 }
 
 header::after {
@@ -67,7 +68,6 @@ header::after {
     color: white;
     text-decoration: none;
 }
-
 
 .dropdown.open .drop-menu {
     display: block;

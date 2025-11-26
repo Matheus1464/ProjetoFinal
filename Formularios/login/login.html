@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,29 +9,26 @@
 </head>
 
 <body>
-
-    <!-- ======================= HEADER CORRIGIDO ======================= -->
-<header>
-    <h1><a href="../../Home/main.html">Magnata Consórcios</a></h1>
-
-    <nav>
-        <ul>
-            <li class="dropdown">
-                <button id="dropBtn"> Tipos de Consórcios <span class="arrow">▼</span></button>
-                <ul class="drop-menu">
-                    <li><a href="#">Automóveis</a></li>
-                    <li><a href="#">Motos</a></li>
-                    <li><a href="#">Imóveis</a></li>
-                    <li><a href="#">Embarcações</a></li>
-                    <li><a href="#">Investimentos</a></li>
-                </ul>
-            </li>
-
-            <li><a href="#">Contate-nos</a></li>
-            <li><a href="../Sobrenos/sobrenos.html">Nossa Equipe</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <h1><a href="../../Home/main.html">Magnata Consórcios</a></h1>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <button id="dropBtn"> Tipos de Consórcios <span class="arrow">▼</span></button>
+                    <ul class="drop-menu">
+                        <li><a href="#">Automóveis</a></li>
+                        <li><a href="#">Motos</a></li>
+                        <li><a href="#">Imóveis</a></li>
+                        <li><a href="#">Embarcações</a></li>
+                        <li><a href="#">Investimentos</a></li>
+                    </ul>
+                </li>
+                <li><a href="../contatenos/contato.html">Contate-nos</a></li>
+                <li><a href="../../Sobrenos/sobrenos.html">Nossa Equipe</a></li>
+                <a href="../login/login.html"><img src="../../Img/login.png" alt=""></a>
+            </ul>
+        </nav>
+    </header>
 
 
 
@@ -133,5 +131,14 @@
         </div>
     </footer>
 
+    <script>
+        const dropBtn = document.querySelector("#dropBtn");
+        const dropdown = document.querySelector(".dropdown");
+
+        dropBtn.addEventListener("click", () => {
+            dropdown.classList.toggle("open");
+        });
+    </script>
 </body>
+
 </html>

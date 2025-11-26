@@ -14,10 +14,11 @@ body {
 /* Header igual ao site principal */
 header {
     background-color: #111;
-    padding: 0px 50px;
+    padding: 0px 15px;
     height: 78px;
     text-align: justify;
     line-height: 70px;
+    border-bottom: 1px solid #222;
 }
 
 header::after {
@@ -26,54 +27,25 @@ header::after {
     width: 100%;
 }
 
-header h1,
-nav {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-header h1 a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-}
-
-header h1 a:hover {
-    color: #e50914;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-left: 25px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    color: #e50914;
-}
-
-.dropdown {
+.dropdown{
     position: relative;
+    display: inline-block; 
+
 }
 
 #dropBtn {
-    background: none;
-    border: none;
+    background-color: #111;
     color: white;
-    font-size: 15px;
+    border: none;
     cursor: pointer;
+    font-size: 15px;
+    transition: color 0.3s;
 }
 
 .dropdown .arrow {
-    margin-left: 5px;
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.3 ease;
 }
 
 .drop-menu {
@@ -82,9 +54,20 @@ nav ul li a:hover {
     position: absolute;
     top: 85%;
     left: 0;
-    padding: 10px 0;
-    border-radius: 8px;
-    z-index: 100;
+    width: 120%;
+    padding: 0;
+    list-style: none;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.drop-menu li {
+    padding: 0 15px ;
+}
+
+.drop-menu li a {
+    color: white;
+    text-decoration: none;
 }
 
 .dropdown.open .drop-menu {
@@ -95,12 +78,55 @@ nav ul li a:hover {
     transform: rotate(180deg);
 }
 
-.drop-menu li {
-    padding: 6px 15px;
+
+header h1,
+nav {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
 }
 
-.drop-menu li a {
-    color: white;
+header h1 a {
+    font-size: 24px;
+    margin-left: 45px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+ul img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+ul img:hover{
+    filter: brightness(0) saturate(100%) invert(23%) sepia(92%) saturate(7487%) hue-rotate(357deg) brightness(93%) contrast(115%);
+}
+
+header h1 a:hover, 
+.dropdown:hover #dropBtn,
+nav ul li a:hover{
+    color: #e50914;
 }
 
 /* -------- SEÇÃO DE INSCRIÇÃO -------- */

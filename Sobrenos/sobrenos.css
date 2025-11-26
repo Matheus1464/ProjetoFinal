@@ -7,10 +7,11 @@
 
 header {
   background-color: #111;
-  padding: 0px 50px;
+  padding: 0px 15px;
   height: 78px;
   text-align: justify;
   line-height: 70px;
+  border-bottom: 1px solid #222;
 }
 
 header::after {
@@ -80,6 +81,7 @@ nav {
 
 header h1 a {
   font-size: 24px;
+  margin-left: 45px;
   color: #fff;
   text-decoration: none;
   transition: color 0.3s;
@@ -100,6 +102,18 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s;
+}
+
+ul img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+ul img:hover{
+    filter: brightness(0) saturate(100%) invert(23%) sepia(92%) saturate(7487%) hue-rotate(357deg) brightness(93%) contrast(115%);
 }
 
 header h1 a:hover,
