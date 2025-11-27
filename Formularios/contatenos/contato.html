@@ -36,7 +36,7 @@
         <p>Estamos prontos para ajudá-lo a realizar seus objetivos. Preencha o formulário abaixo!</p>
 
         <div class="contact-container">
-            
+
             <div class="success-message" id="successMessage">
                 ✓ Mensagem enviada com sucesso! Entraremos em contato em breve.
             </div>
@@ -101,17 +101,23 @@
             <h3>Outros Canais de Atendimento</h3>
             <div class="info-cards">
                 <div class="info-card">
-                    <span class="icon">📞</span>
+                    <a class="topic-icon" href="#">
+                        <img src="/Img/phone.png" alt="phone">
+                    </a>
                     <h4>Telefone</h4>
                     <p>(51) 3000-0000</p>
                 </div>
                 <div class="info-card">
-                    <span class="icon">💬</span>
+                    <a class="topic-icon" href="#">
+                        <img src="/Img/whatsapp2.png" alt="zap">
+                    </a>
                     <h4>WhatsApp</h4>
                     <p>(51) 99999-9999</p>
                 </div>
                 <div class="info-card">
-                    <span class="icon">📧</span>
+                    <a class="topic-icon" href="#">
+                        <img src="/Img/mail.png" alt="mail">
+                    </a>
                     <h4>E-mail</h4>
                     <p>contato@magnataconsorcios.com</p>
                 </div>
@@ -122,7 +128,10 @@
             <h3>Nossa Localização</h3>
             <p class="address">R. Cel. Genuíno, 130 - Centro Histórico, Porto Alegre - RS, 90010-350</p>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.0542747469276!2d-51.228960025318344!3d-30.035300730850796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519790153607eb9%3A0x8a962c7c2fe8574b!2sR.%20Cel.%20Genu%C3%ADno%2C%20130%20-%20Centro%20Hist%C3%B3rico%2C%20Porto%20Alegre%20-%20RS%2C%2090010-350!5e0!3m2!1spt-BR!2sbr!4v1763683463018!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.0542747469276!2d-51.228960025318344!3d-30.035300730850796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519790153607eb9%3A0x8a962c7c2fe8574b!2sR.%20Cel.%20Genu%C3%ADno%2C%20130%20-%20Centro%20Hist%C3%B3rico%2C%20Porto%20Alegre%20-%20RS%2C%2090010-350!5e0!3m2!1spt-BR!2sbr!4v1763683463018!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
 
@@ -131,6 +140,7 @@
 <footer>
     <div class="footer-content">
 
+<<<<<<< Updated upstream
         <!-- Bloco 1: Logo e informações (continua div, pois não é navegação) -->
         <div class="footer-block footer-info">
             <h3 class="footer-logo">Magnata Consórcios</h3>
@@ -140,6 +150,35 @@
                 Porto Alegre - RS, 90010-350
             </p>
             <p class="footer-cnpj">CNPJ: 89.567.345/0001-12</p>
+=======
+            <!-- Bloco 2: Magnata Consórcios -->
+            <div class="footer-block">
+                <h4>Magnata Consórcios</h4>
+                <ul>
+                    <li><a href="../../Formularios/login/login.html">Área do Cliente</a></li>
+                    <li><a href="../../Home/regulamento.html">Questões Legais</a></li>
+                </ul>
+            </div>
+
+            <!-- Bloco 3: Contato -->
+            <div class="footer-block">
+                <h4>Contato</h4>
+                <ul>
+                    <li><a href="../../Formularios/contatenos/contato.html">Fale com um Consultor</a></li>
+                    <li><a href="../../Formularios/newsletter/newsletter.html">Newsletter</a></li>
+                </ul>
+            </div>
+
+            <!-- Bloco 4: Tipos de Consórcios -->
+            <div class="footer-block">
+                <h4>Tipos de Consórcios</h4>
+                <ul>
+                    <li><a href="#">Consórcio de Veículos</a></li>
+                    <li><a href="#">Consórcio Imobiliário</a></li>
+                    <li><a href="#">Consórcio de Serviços</a></li>
+                </ul>
+            </div>
+>>>>>>> Stashed changes
         </div>
 
         <!-- Bloco 2: Navegação - Magnata Consórcios -->
@@ -211,17 +250,17 @@
 
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             // Mostrar mensagem de sucesso
             successMessage.classList.add('show');
-            
+
             // Limpar formulário
             contactForm.reset();
             dataReuniaoGroup.style.display = 'none';
-            
+
             // Rolar para o topo
             window.scrollTo({ top: 0, behavior: 'smooth' });
-            
+
             // Esconder mensagem após 5 segundos
             setTimeout(() => {
                 successMessage.classList.remove('show');

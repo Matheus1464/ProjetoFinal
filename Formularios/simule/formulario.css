@@ -212,10 +212,11 @@ textarea {
 
 /* -------- SEÇÕES INFORMATIVAS -------- */
 .info-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid; 
+    grid-template-columns: 1fr;
+    row-gap: 20px;
 }
+
 
 .info-card {
     background-color: #111;
@@ -231,21 +232,14 @@ textarea {
 }
 
 .info-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #e50914;
+    display: block;
 }
 
-.info-icon {
-    font-size: 28px;
-}
-
+.info-header .info-icon,
 .info-header h3 {
-    font-size: 20px;
-    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
 }
 
 .info-content {

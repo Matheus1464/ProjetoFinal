@@ -27,9 +27,9 @@ header::after {
     width: 100%;
 }
 
-.dropdown{
+.dropdown {
     position: relative;
-    display: inline-block; 
+    display: inline-block;
 
 }
 
@@ -62,7 +62,7 @@ header::after {
 }
 
 .drop-menu li {
-    padding: 0 15px ;
+    padding: 0 15px;
 }
 
 .drop-menu li a {
@@ -111,7 +111,7 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-ul img{
+ul img {
     display: inline-block;
     vertical-align: middle;
     width: 50px;
@@ -119,13 +119,13 @@ ul img{
     cursor: pointer;
 }
 
-ul img:hover{
+ul img:hover {
     filter: brightness(0) saturate(100%) invert(23%) sepia(92%) saturate(7487%) hue-rotate(357deg) brightness(93%) contrast(115%);
 }
 
-header h1 a:hover, 
+header h1 a:hover,
 .dropdown:hover #dropBtn,
-nav ul li a:hover{
+nav ul li a:hover {
     color: #e50914;
 }
 
@@ -179,24 +179,18 @@ nav ul li a:hover{
 }
 
 .checkbox-group {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 25px;
-    text-align: left;
+    display: block;
 }
 
 .checkbox-group input[type="checkbox"] {
-    width: auto;
+    float: left;
+    margin-right: 10px;
     margin-top: 4px;
-    cursor: pointer;
-    accent-color: #e50914;
 }
 
 .checkbox-group label {
-    font-size: 14px;
-    color: #bbb;
-    cursor: pointer;
+    display: block;
+    overflow: hidden;
 }
 
 .checkbox-group label a {
@@ -373,7 +367,7 @@ footer {
         grid-template-columns: 1fr 1fr;
         gap: 30px;
     }
-    
+
     .footer-info {
         grid-column: 1 / -1;
     }
@@ -384,7 +378,7 @@ footer {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     footer {
         padding: 40px 20px 20px;
     }

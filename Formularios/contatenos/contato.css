@@ -215,23 +215,25 @@ nav ul li a:hover{
 
 /* Checkbox para reunião */
 .checkbox-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .checkbox-group input[type="checkbox"] {
-    width: auto;
+    vertical-align: middle;
+    margin-right: 8px;
     cursor: pointer;
     accent-color: #e50914;
 }
 
 .checkbox-group label {
+    vertical-align: middle;
     font-size: 15px;
     color: #bbb;
     cursor: pointer;
-    margin-bottom: 0;
+    margin: 0;
 }
+
 
 /* Botão de envio */
 .btn-enviar {
@@ -281,10 +283,16 @@ nav ul li a:hover{
     transform: translateY(-5px);
 }
 
-.info-card .icon {
-    font-size: 40px;
-    display: block;
-    margin-bottom: 15px;
+.topic-icon {
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.topic-icon img {
+    height: 100%;
+    object-fit: contain;
 }
 
 .info-card h4 {
