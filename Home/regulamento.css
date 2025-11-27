@@ -175,6 +175,12 @@ nav ul li a:hover{
     border-radius: 15px;
     padding: 30px;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    column-gap: 20px;
+>>>>>>> Stashed changes
 =======
     display: grid;
     grid-template-columns: 60px 1fr;
@@ -187,7 +193,11 @@ nav ul li a:hover{
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* Efeito hover */
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
@@ -209,6 +219,9 @@ nav ul li a:hover{
 }
 
 .topic-content {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     display: block;
 }
