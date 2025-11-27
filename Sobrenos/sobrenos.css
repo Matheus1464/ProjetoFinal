@@ -108,7 +108,6 @@ ul img{
     display: inline-block;
     vertical-align: middle;
     width: 50px;
-    margin-left: 10px;
     cursor: pointer;
 }
 
@@ -210,8 +209,17 @@ nav ul li a:hover {
   transition: transform 0.3s;
 }
 
-.social img:hover {
-  transform: scale(1.15);
+.social a:hover img {
+    filter: brightness(1.2);
+    transform: scale(1.15);
+}
+
+.social a {
+    color: inherit !important;
+}
+
+.social a:hover {
+    color: inherit !important;
 }
 
 .arrow {
@@ -252,11 +260,10 @@ nav ul li a:hover {
 }
 
 /* -------- FOOTER -------- */
-footer {
+.footer {
     background-color: #111;
     color: #bbb;
     padding: 50px 20px 20px;
-    margin-top: 60px;
 }
 
 .footer-content {
@@ -269,7 +276,7 @@ footer {
     border-bottom: 1px solid #333;
 }
 
-/* Bloco de informações da empresa */
+/* BLOCO PRINCIPAL */
 .footer-info {
     padding-right: 20px;
 }
@@ -293,7 +300,7 @@ footer {
     font-size: 13px;
 }
 
-/* Blocos de menu */
+/* LINKS */
 .footer-block h4 {
     font-size: 18px;
     color: white;
@@ -307,22 +314,24 @@ footer {
     margin: 0;
 }
 
-.footer-block ul li {
-    display: block;     /* força ficar um embaixo do outro */
+.footer-block li {
     margin-bottom: 12px;
 }
 
-.footer-block ul li a {
-    display: inline-block; /* pode manter, não causa problema */
+.footer-block a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s ease;
+    display: inline-block;
 }
 
-
-.footer-block ul li a:hover {
+.footer-block a:hover {
     color: #e50914;
     transform: translateX(5px);
 }
 
-/* Linha de copyright */
+/* COPYRIGHT */
 .footer-bottom {
     text-align: center;
     padding-top: 25px;
