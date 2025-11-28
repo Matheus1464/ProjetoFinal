@@ -163,6 +163,7 @@ nav ul li a:hover {
 }
 
 .card.active>img {
+  border-radius: 20px;
   width: 400px;
   /* mantém o tamanho máximo desejado */
   max-width: 100%;
@@ -180,12 +181,14 @@ nav ul li a:hover {
 
 
 .sobre-text h1 {
+  color: lightgrey;
   font-size: 60px;
   margin-bottom: 20px;
   font-family: "Josefin Sans", sans-serif;
 }
 
 .sobre-text h5 {
+  color: white;
   font-size: 22px;
   margin-bottom: 20px;
   font-family: "Josefin Sans", sans-serif;
