@@ -245,16 +245,17 @@ nav ul li a:hover {
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    text-align: center;
     padding: 50px;
     background-color: #111;
 }
 
 .card {
-    display: block;
-    height: 360px;
+    display: inline-block;
+    width: 400px;
+    margin: 15px;
+    vertical-align: top;
+    height: 350px;
     background-color: #1b1b1b;
     border-radius: 30px;
     overflow: hidden;
@@ -294,7 +295,7 @@ nav ul li a:hover {
 
 .flip-card {
     perspective: 1000px;
-    display: block;
+    display: inline-block;
 }
 
 .flip {
@@ -381,22 +382,30 @@ nav ul li a:hover {
     color: #bbb;
     padding: 50px 20px 20px;
     margin-top: 50px;
-    line-height: normal;
+
 }
 
 .footer-content {
     max-width: 1400px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 40px;
+    overflow: hidden;
     padding-bottom: 30px;
     border-bottom: 1px solid #333;
 }
 
 /* BLOCO PRINCIPAL */
+.footer-info,
+.footer-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
 .footer-info {
-    padding-right: 20px;
+    width: 40%;
+}
+
+.footer-block {
+    width: 18%;
 }
 
 .footer-logo {
@@ -432,10 +441,6 @@ nav ul li a:hover {
     margin: 0;
 }
 
-.footer-block li {
-    margin-bottom: 12px;
-}
-
 .footer-block a {
     color: #bbb;
     text-decoration: none;
@@ -463,20 +468,30 @@ nav ul li a:hover {
 
 /* Responsividade */
 @media (max-width: 1024px) {
-    .footer-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
+
+    .footer-info,
+    .footer-block {
+        width: 45%;
+        margin-bottom: 25px;
     }
 
     .footer-info {
-        grid-column: 1 / -1;
+        width: 100%;
     }
 }
 
 @media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .form-container,
+    .info-sidebar {
+        width: 100%;
+        margin: 0 0 25px 0;
+        display: block;
+    }
+
+    .footer-info,
+    .footer-block {
+        width: 100%;
+        margin-bottom: 25px;
     }
 
     footer {

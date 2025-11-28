@@ -162,19 +162,33 @@ nav ul li a:hover {
 
 /* Container de Tópicos */
 .topics-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 25px;
+    text-align: center;       /* centraliza os cards na linha */
     margin-bottom: 50px;
+    font-size: 0
 }
 
 /* Cards dos Tópicos */
 .topic-card {
     background-color: #111;
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;               /* duas colunas aproximadas */
+    box-sizing: border-box;   /* garante paddings sem quebrar largura */
+    margin: 10px 1% 20px;     /* controla espaçamento entre os cards */
+    background-color: #111;
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 0 20px rgba(229, 9, 20, 0.2);
     transition: 0.3s;
+    text-align: left;         /* conteúdo interno alinhado à esquerda */
+    min-height: 260px;        /* garante alturas uniformes — ajuste conforme necessário */
+    font-size: 16px;          /* restaura tamanho para conteúdo (porque container usa font-size:0) */
+    overflow: hidden;         /* evita que conteúdo “vaze” do card */
+}
+
+.topic-card .topic-content {
+    max-height: calc(100% - 70px); /* deixa espaço para ícone/título/link */
+    overflow: auto;
 }
 
 /* Efeito hover */
@@ -258,29 +272,36 @@ nav ul li a:hover {
 }
 
 
-/* -------- FOOTER -------- */
+
 /* -------- FOOTER -------- */
 .footer {
     background-color: #111;
     color: #bbb;
     padding: 50px 20px 20px;
-    margin-top: 20px;
-    
+
 }
 
 .footer-content {
     max-width: 1400px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 40px;
+    overflow: hidden;
     padding-bottom: 30px;
     border-bottom: 1px solid #333;
 }
 
 /* BLOCO PRINCIPAL */
+.footer-info,
+.footer-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
 .footer-info {
-    padding-right: 20px;
+    width: 40%;
+}
+
+.footer-block {
+    width: 18%;
 }
 
 .footer-logo {
@@ -328,6 +349,7 @@ nav ul li a:hover {
     display: inline-block;
 }
 
+
 .footer-block a:hover {
     color: #e50914;
     transform: translateX(5px);
@@ -346,17 +368,36 @@ nav ul li a:hover {
 
 /* Responsividade */
 @media (max-width: 1024px) {
-    .footer-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
+    .footer-info,
+    .footer-block {
+        width: 45%;
+        margin-bottom: 25px;
     }
-    
+
     .footer-info {
-        grid-column: 1 / -1;
+        width: 100%;
     }
 }
 
 @media (max-width: 768px) {
+
+    .form-container,
+    .info-sidebar {
+        width: 100%;
+        margin: 0 0 25px 0;
+        display: block;
+    }
+
+    .footer-info,
+    .footer-block {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    footer {
+        padding: 40px 20px 20px;
+    }
+
 
     header {
         padding: 0px 20px;
@@ -371,21 +412,13 @@ nav ul li a:hover {
     }
     
     .topic-card {
-        grid-template-columns: 1fr;
-        text-align: center;
+        width: 90%;
+        display: block;
+        margin: 20px auto;
     }
     
     .topic-icon {
         margin: 0 auto 15px auto;
     }
     
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    footer {
-        padding: 40px 20px 20px;
-    }
 }
