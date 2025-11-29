@@ -1,13 +1,8 @@
-/* Importação da fonte */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
-
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: none;
-  font-family: "Roboto", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -153,7 +148,7 @@ nav ul li a:hover {
 .catalog {
   width: 100vw;
   padding: 50px 0;
-  background-color: var(--bg-black);
+  background-color: #0a0a0a;
 }
 
 .filter-card {
@@ -161,7 +156,7 @@ nav ul li a:hover {
   max-width: 980px;
   height: auto;
   min-height: 100px;
-  background: var(--bg-dark-gray);
+  background: #2d2c2c87;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   margin: 0 auto 50px auto;
@@ -348,66 +343,110 @@ nav ul li a:hover {
   color: var(--text-gray);
 }
 
-footer {
-  width: 100%;
-  background: var(--bg-black);
-  border-top: 1px solid var(--border-color);
+/* -------- FOOTER -------- */
+.footer {
+  background-color: #111;
+  color: #bbb;
+  padding: 50px 20px 20px;
+
 }
 
-footer .main {
-  width: 100%;
-  padding: 50px 10px;
-}
-
-.footer-links {
-  max-width: 1000px;
+.footer-content {
+  max-width: 1400px;
   margin: 0 auto;
-  text-align: left;
-  /* Font-size 0 para remover espaços de inline-block */
-  font-size: 0; 
+  overflow: hidden;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333;
 }
 
-.footer-company,
-.footer-rental,
-.footer-contact,
-.footer-social {
+/* BLOCO PRINCIPAL */
+.footer-info,
+.footer-block {
   display: inline-block;
   vertical-align: top;
-  width: 23%; /* 4 colunas com um pouco de folga */
-  margin: 0 1%;
-  min-width: 200px;
-  color: var(--text-white);
-  font-size: 16px; /* Restaura fonte */
+}
+
+.footer-info {
+  width: 40%;
+}
+
+.footer-block {
+  width: 18%;
+}
+
+.footer-logo {
+  font-size: 24px;
+  color: #e50914;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
-.footer-links h4 {
+.footer-address {
+  line-height: 1.8;
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.footer-cnpj {
+  color: #777;
+  font-size: 13px;
+}
+
+/* LINKS */
+.footer-block h4 {
+  font-size: 18px;
+  color: white;
   margin-bottom: 20px;
-  color: var(--accent-red);
-  text-transform: uppercase;
-  font-size: 0.9em;
+  font-weight: bold;
 }
 
-.footer-links h6 {
-  margin-bottom: 10px;
-  color: var(--text-gray);
-  font-weight: normal;
-  cursor: pointer;
+.footer-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.footer-links h6:hover {
-  color: var(--text-white);
-  text-decoration: underline;
+.footer-block li {
+  margin-bottom: 12px;
 }
 
-footer .last {
-  width: 100%;
-  height: 50px;
-  background-color: darkred;
-  color: var(--text-gray);
+.footer-block a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.footer-block a:hover {
+  color: #e50914;
+  transform: translateX(5px);
+}
+
+/* COPYRIGHT */
+.footer-bottom {
   text-align: center;
-  line-height: 50px;
-  font-size: 0.8em;
+  padding-top: 25px;
+}
+
+.footer-bottom p {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+
+  .footer-info,
+  .footer-block {
+    width: 45%;
+    margin-bottom: 25px;
+  }
+
+  .footer-info {
+    width: 100%;
+  }
 }
 
 /* --- RESPONSIVIDADE --- */
@@ -440,14 +479,21 @@ footer .last {
     margin: 0 auto; /* Centraliza */
   }
   
-  /* Footer: Colunas ocupam 100% */
-  .footer-company,
-  .footer-rental,
-  .footer-contact,
-  .footer-social {
-    display: block;
+  .form-container,
+  .info-sidebar {
     width: 100%;
-    text-align: center;
+    margin: 0 0 25px 0;
+    display: block;
+  }
+
+  .footer-info,
+  .footer-block {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    padding: 40px 20px 20px;
   }
   
   .card-item {

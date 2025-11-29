@@ -27,7 +27,8 @@
 
                 <li><a href="../Formularios/contatenos/contato.html">Contate-nos</a></li>
                 <li><a href="../Sobrenos/sobrenos.html">Nossa Equipe</a></li>
-                <li><a href="../Formularios/login/login.html"><img src="../Formularios/login/Img/login.png" alt=""></a></li>
+                <li><a href="../Formularios/login/login.html"><img src="../Formularios/login/Img/login.png" alt=""></a>
+                </li>
 
             </ul>
         </nav>
@@ -53,7 +54,7 @@
     </section>
 
     <section class="cards">
-        <a href="../Formularios/simule/formulario.html" class="card flip-card">
+        <a href="../Produtos/carros/carros.html" class="card flip-card">
             <div class="flip">
                 <div class="flip-front">
                     <figure>
@@ -73,7 +74,7 @@
             </div>
         </a>
 
-        <a href="../Formularios/simule/formulario.html" class="card flip-card">
+        <a href="../Produtos/motos/motos.html" class="card flip-card">
             <div class="flip">
                 <div class="flip-front">
                     <figure>
@@ -92,7 +93,7 @@
             </div>
         </a>
 
-        <a href="../Formularios/simule/formulario.html" class="card flip-card">
+        <a href="../Produtos/casas/casas.html" class="card flip-card">
             <div class="flip">
                 <div class="flip-front">
                     <figure>
@@ -112,7 +113,7 @@
             </div>
         </a>
 
-        <a href="../Formularios/simule/formulario.html" class="card flip-card">
+        <a href="../Produtos/barcos/barcos.html" class="card flip-card">
             <div class="flip">
                 <div class="flip-front">
                     <figure>
@@ -233,27 +234,7 @@
         </div>
     </footer>
 
-    <script>
-        const track = document.querySelector('.carousel-track');
-        const slides = document.querySelectorAll('.carousel-track img');
-        let index = 0;
-
-        function nextSlide() {
-            index = (index + 1) % slides.length;
-            track.style.transform = `translateX(-${index * 100}%)`;
-        }
-
-        setInterval(nextSlide, 4000);
-
-
-        const dropBtn = document.querySelector("#dropBtn");
-        const dropdown = document.querySelector(".dropdown");
-
-        dropBtn.addEventListener("click", () => {
-            dropdown.classList.toggle("open");
-        });
-
-    </script>
 </body>
+<script src="main.js"></script>
 
 </html>
