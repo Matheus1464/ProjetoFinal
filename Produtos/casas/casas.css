@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+header {
+    background-color: #111;
+    padding: 0px 15px;
+    height: 78px;
+    text-align: justify;
+    line-height: 70px;
+    border-bottom: 1px solid #222;
+}
+
+header::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    /* Mantém ele no header sem quebrar layout */
+}
+
+#dropBtn {
+    background-color: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.dropdown .s-arrow {
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.3 ease;
+}
+
+.drop-menu {
+    display: none;
+    background: #1d1d1d;
+    position: absolute;
+    top: 85%;
+    left: 0;
+    width: 110%;
+    padding: 0;
+    list-style: none;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.drop-menu li {
+    padding: 0 15px;
+}
+
+.drop-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Quando abrir */
+.dropdown.open .drop-menu {
+    display: block;
+}
+
+.dropdown.open .s-arrow {
+    transform: rotate(180deg);
+}
+
+header h1,
+nav {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+header h1 a {
+    font-size: 24px;
+    margin-left: 45px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+ul img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    cursor: pointer;
+}
+
+ul img:hover {
+    filter: brightness(0) saturate(100%) invert(23%) sepia(92%) saturate(7487%) hue-rotate(357deg) brightness(93%) contrast(115%);
+}
+
+header h1 a:hover,
+.dropdown:hover #dropBtn,
+nav ul li a:hover {
+    color: #e50914;
+}
+
+.houses-section {
+    padding: 50px;
+    margin: 0% 15% 5%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2em;
+    color: var(--color-secondary);
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--color-primary);
+    /* Sublinhado vermelho */
+    margin: 10px auto 0;
+}
+
+.houses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Responsivo para 1 ou 2 colunas */
+    gap: 30px;
+    justify-content: center;
+}
+
+.house-card {
+    background-color: var(--color-card-background);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    /* Sombra suave */
+    transition: transform 0.3s;
+}
+
+.house-card:hover {
+    transform: translateY(-5px);
+    /* Efeito sutil ao passar o mouse */
+}
+
+.house-image {
+    height: 220px;
+    background-color: #444;
+    /* Cor de fundo para simular a imagem, ajuste conforme a necessidade real */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: var(--color-text-light);
+    padding: 10px;
+}
+
+.house-details {
+    padding: 20px;
+}
+
+.house-title {
+    font-size: 1.3em;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    min-height: 50px;
+    /* Para manter a altura consistente entre os títulos */
+}
+
+.price {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+}
+
+/* Detalhes de Despesas (IPTU/Condomínio) */
+.expenses {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: #333333;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.expense-label {
+    font-size: 0.8em;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+}
+
+.expense-value {
+    font-weight: 700;
+    color: var(--color-secondary);
+}
+
+/* Lista de Recursos (Features) */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.feature {
+    background-color: #444444;
+    color: var(--color-text-light);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+}
+
+.feature input[type="checkbox"] {
+    display: none;
+    /* Esconde o checkbox real */
+}
+
+.feature label {
+    cursor: default;
+}
+
+/* Botões de Ação */
+.actions {
+    display: flex;
+    gap: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--color-separator);
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    flex-grow: 1;
+    /* Para ocupar o espaço uniformemente */
+}
+
+.btn-primary ,
+.btn-secondary {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    background-color: #e50914;
+    /* Um vermelho um pouco mais claro */
+}
+
+
+/* -------- FOOTER -------- */
+.footer {
+    background-color: #111;
+    color: #bbb;
+    padding: 50px 20px 20px;
+
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #333;
+}
+
+/* BLOCO PRINCIPAL */
+.footer-info,
+.footer-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-info {
+    width: 40%;
+}
+
+.footer-block {
+    width: 18%;
+}
+
+.footer-logo {
+    font-size: 24px;
+    color: #e50914;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer-address {
+    line-height: 1.8;
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.footer-cnpj {
+    color: #777;
+    font-size: 13px;
+}
+
+/* LINKS */
+.footer-block h4 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-block li {
+    margin-bottom: 12px;
+}
+
+.footer-block a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer-block a:hover {
+    color: #e50914;
+    transform: translateX(5px);
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.footer-bottom p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+
+    .footer-info,
+    .footer-block {
+        width: 45%;
+        margin-bottom: 25px;
+    }
+
+    .footer-info {
+        width: 100%;
+    }
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+
+    /* About: Remove float para empilhar */
+    .left,
+    .right {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .left {
+        margin-bottom: 20px;
+    }
+
+    .right h3 {
+        text-align: center;
+    }
+
+    /* Filter Card: Empilha input e botão */
+    .search-input {
+        display: block;
+        margin: 0 auto 10px auto;
+        /* Centraliza e dá margem */
+    }
+
+    .search-button {
+        display: block;
+        margin: 0 auto;
+        /* Centraliza */
+    }
+
+    .form-container,
+    .info-sidebar {
+        width: 100%;
+        margin: 0 0 25px 0;
+        display: block;
+    }
+
+    .footer-info,
+    .footer-block {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    footer {
+        padding: 40px 20px 20px;
+    }
+
+    .card-item {
+        width: 90%;
+        display: block;
+        margin: 15px auto;
+    }
+}

@@ -1,0 +1,504 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+header {
+    background-color: #111;
+    padding: 0px 15px;
+    height: 78px;
+    text-align: justify;
+    line-height: 70px;
+    border-bottom: 1px solid #222;
+}
+
+header::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  /* Mantém ele no header sem quebrar layout */
+}
+
+#dropBtn {
+  background-color: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.dropdown .s-arrow {
+  display: inline-block;
+  margin-left: 6px;
+  transition: transform 0.3 ease;
+}
+
+.drop-menu {
+  display: none;
+  background: #1d1d1d;
+  position: absolute;
+  top: 85%;
+  left: 0;
+  width: 110%;
+  padding: 0;
+  list-style: none;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.drop-menu li {
+  padding: 0 15px;
+}
+
+.drop-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Quando abrir */
+.dropdown.open .drop-menu {
+  display: block;
+}
+
+.dropdown.open .s-arrow {
+  transform: rotate(180deg);
+}
+
+header h1,
+nav {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+header h1 a {
+  font-size: 24px;
+  margin-left: 45px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+ul img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  cursor: pointer;
+}
+
+ul img:hover {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(92%) saturate(7487%) hue-rotate(357deg) brightness(93%) contrast(115%);
+}
+
+header h1 a:hover,
+.dropdown:hover #dropBtn,
+nav ul li a:hover {
+  color: #e50914;
+}
+
+:root {
+  /* Paleta de Cores Dark Mode */
+  --bg-black: #000000;      /* Fundo principal preto */
+  --bg-dark-gray: #141414;  /* Fundo secundário (cards, sessões) */
+  --accent-red: #8b0000;    /* Cor de destaque (botões) */
+  --text-white: #ffffff;    /* Texto principal */
+  --text-gray: #b3b3b3;     /* Texto secundário (descrições) */
+  --border-color: #333333;  /* Bordas sutis */
+}
+
+.content {
+  max-width: 1200px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+/* --- CATÁLOGO --- */
+.catalog {
+  width: 100%;
+  padding: 50px 0;
+  background-color: #0a0a0a;
+}
+
+.filter-card {
+  width: 100%;
+  max-width: 980px;
+  height: auto;
+  min-height: 100px;
+  background: #2d2c2c87;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  padding: 20px;
+  word-spacing: 10px; /* Espaço entre elementos inline-block */
+}
+
+.search-input {
+  width: 100%;
+  max-width: 600px;
+  height: 50px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  text-indent: 15px;
+  background-color: #222;
+  color: white;
+  /* Alinhamento inline-block */
+  display: inline-block;
+  vertical-align: middle;
+  word-spacing: normal; /* Reseta espaçamento interno */
+  margin-bottom: 10px; /* Margem para mobile se quebrar linha */
+}
+
+.search-input::placeholder {
+  color: #777;
+}
+
+.search-button {
+  width: 150px;
+  height: 50px;
+  border-radius: 4px;
+  border: none;
+  background: var(--accent-red);
+  color: white;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: 0.3s ease;
+  /* Alinhamento inline-block */
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px; /* Espaço manual */
+}
+
+.search-button:hover {
+  background: #a31515;
+}
+
+/* Wrapper dos Cards */
+.card-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0; /* Remove espaço extra entre inline-blocks */
+}
+
+/* Card Individual */
+.card-item {
+  display: inline-block;
+  width: 280px;
+  margin: 15px;
+  background: var(--bg-dark-gray);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  vertical-align: top;
+  text-align: center;
+  font-size: 16px; /* Restaura fonte */
+  transition: transform 0.3s ease;
+}
+
+.card-item:hover {
+  transform: translateY(-5px);
+  border-color: #555;
+}
+
+.card-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: fill;
+  display: block;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-item h3 {
+  margin: 10px 0;
+  color: var(--text-white);
+  font-size: 1.2em;
+}
+
+.card-item p {
+  font-style: italic;
+  color: var(--text-gray);
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+.card-item button {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  background: var(--accent-red);
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.card-item button:hover {
+  background: #a31515;
+}
+
+.about {
+  width: 100%;
+  padding: 50px 10px;
+  text-align: center;
+  background-color: var(--bg-black);
+}
+
+.title-wrapper-about p {
+  color: var(--accent-red);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
+
+.title-wrapper-about h3 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: var(--text-white);
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--bg-dark-gray);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 40px;
+  text-align: left;
+  /* Clearfix para elementos float */
+  overflow: hidden; 
+}
+
+.left {
+  float: left;
+  width: 35%; /* Largura aproximada */
+  min-width: 250px;
+  margin-right: 5%; /* Espaço entre colunas */
+}
+
+.left img {
+  width: 100%;
+  border-radius: 8px;
+  filter: brightness(0.9);
+  display: block;
+}
+
+.right {
+  float: left;
+  width: 60%; /* Ocupa o restante */
+}
+
+.right h3 {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 20px;
+  color: var(--text-white);
+  font-size: 1.5em;
+}
+
+.right p {
+  font-size: 1em;
+  line-height: 1.6;
+  text-align: justify;
+  color: var(--text-gray);
+}
+
+/* -------- FOOTER -------- */
+.footer {
+  background-color: #111;
+  color: #bbb;
+  padding: 50px 20px 20px;
+
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333;
+}
+
+/* BLOCO PRINCIPAL */
+.footer-info,
+.footer-block {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer-info {
+  width: 40%;
+}
+
+.footer-block {
+  width: 18%;
+}
+
+.footer-logo {
+  font-size: 24px;
+  color: #e50914;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer-address {
+  line-height: 1.8;
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.footer-cnpj {
+  color: #777;
+  font-size: 13px;
+}
+
+/* LINKS */
+.footer-block h4 {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-block li {
+  margin-bottom: 12px;
+}
+
+.footer-block a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.footer-block a:hover {
+  color: #e50914;
+  transform: translateX(5px);
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+  text-align: center;
+  padding-top: 25px;
+}
+
+.footer-bottom p {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+
+  .footer-info,
+  .footer-block {
+    width: 45%;
+    margin-bottom: 25px;
+  }
+
+  .footer-info {
+    width: 100%;
+  }
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+  
+  /* About: Remove float para empilhar */
+  .left, .right {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+  
+  .left {
+    margin-bottom: 20px;
+  }
+  
+  .right h3 {
+    text-align: center;
+  }
+
+  /* Filter Card: Empilha input e botão */
+  .search-input {
+    display: block;
+    margin: 0 auto 10px auto; /* Centraliza e dá margem */
+  }
+  
+  .search-button {
+    display: block;
+    margin: 0 auto; /* Centraliza */
+  }
+  
+  .form-container,
+  .info-sidebar {
+    width: 100%;
+    margin: 0 0 25px 0;
+    display: block;
+  }
+
+  .footer-info,
+  .footer-block {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    padding: 40px 20px 20px;
+  }
+  
+  .card-item {
+    width: 90%;
+    display: block;
+    margin: 15px auto;
+  }
+}
