@@ -26,105 +26,105 @@ header::after {
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
-  /* Mantém ele no header sem quebrar layout */
+    position: relative;
+    display: inline-block;
+    /* Mantém ele no header sem quebrar layout */
 }
 
 #dropBtn {
-  background-color: #111;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
-  transition: color 0.3s;
+    background-color: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: color 0.3s;
 }
 
 .dropdown .s-arrow {
-  display: inline-block;
-  margin-left: 6px;
-  transition: transform 0.3 ease;
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.5s ease;
 }
 
 .drop-menu {
-  display: none;
-  background: #1d1d1d;
-  position: absolute;
-  top: 85%;
-  left: 0;
-  width: 110%;
-  padding: 0;
-  list-style: none;
-  border-radius: 10px;
-  z-index: 10;
+    display: none;
+    background: #1d1d1d;
+    position: absolute;
+    top: 85%;
+    left: 0;
+    width: 110%;
+    padding: 0;
+    list-style: none;
+    border-radius: 10px;
+    z-index: 10;
 }
 
 .drop-menu li {
-  padding: 0 15px;
+    padding: 0 15px;
 }
 
 .drop-menu li a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
 /* Quando abrir */
 .dropdown.open .drop-menu {
-  display: block;
+    display: block;
 }
 
 .dropdown.open .s-arrow {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 header h1,
 nav {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
 }
 
 header h1 a {
-  font-size: 24px;
-  margin-left: 45px;
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
+    font-size: 24px;
+    margin-left: 45px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-  display: inline-block;
-  margin-left: 25px;
+    display: inline-block;
+    margin-left: 25px;
 }
 
 nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-ul img{
+ul img {
     display: inline-block;
     vertical-align: middle;
     width: 50px;
-    
+
     cursor: pointer;
 }
 
-ul img:hover{
+ul img:hover {
     filter: brightness(0) saturate(100%) invert(23%) sepia(92%) saturate(7487%) hue-rotate(357deg) brightness(93%) contrast(115%);
 }
 
 header h1 a:hover,
 .dropdown:hover #dropBtn,
 nav ul li a:hover {
-  color: #e50914;
+    color: #e50914;
 }
 
 
@@ -303,7 +303,7 @@ input,
     background-color: #111;
     color: #bbb;
     padding: 50px 20px 20px;
-    
+
 }
 
 .footer-content {
@@ -393,6 +393,7 @@ input,
 
 /* Responsividade */
 @media (max-width: 1024px) {
+
     .footer-info,
     .footer-block {
         width: 45%;
@@ -405,6 +406,7 @@ input,
 }
 
 @media (max-width: 768px) {
+
     .footer-info,
     .footer-block {
         width: 100%;

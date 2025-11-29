@@ -28,104 +28,105 @@ header::after {
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
-  /* Mantém ele no header sem quebrar layout */
+    position: relative;
+    display: inline-block;
+    /* Mantém ele no header sem quebrar layout */
 }
 
 #dropBtn {
-  background-color: #111;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
-  transition: color 0.3s;
+    background-color: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: color 0.3s;
 }
 
 .dropdown .s-arrow {
-  display: inline-block;
-  margin-left: 6px;
-  transition: transform 0.3 ease;
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.5s ease;
+
 }
 
 .drop-menu {
-  display: none;
-  background: #1d1d1d;
-  position: absolute;
-  top: 85%;
-  left: 0;
-  width: 110%;
-  padding: 0;
-  list-style: none;
-  border-radius: 10px;
-  z-index: 10;
+    display: none;
+    background: #1d1d1d;
+    position: absolute;
+    top: 85%;
+    left: 0;
+    width: 110%;
+    padding: 0;
+    list-style: none;
+    border-radius: 10px;
+    z-index: 10;
 }
 
 .drop-menu li {
-  padding: 0 15px;
+    padding: 0 15px;
 }
 
 .drop-menu li a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
 /* Quando abrir */
 .dropdown.open .drop-menu {
-  display: block;
+    display: block;
 }
 
 .dropdown.open .s-arrow {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 header h1,
 nav {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
 }
 
 header h1 a {
-  font-size: 24px;
-  margin-left: 45px;
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
+    font-size: 24px;
+    margin-left: 45px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-  display: inline-block;
-  margin-left: 25px;
+    display: inline-block;
+    margin-left: 25px;
 }
 
 nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-ul img{
+ul img {
     display: inline-block;
     vertical-align: middle;
     width: 50px;
     cursor: pointer;
 }
 
-ul img:hover{
+ul img:hover {
     filter: brightness(0) saturate(100%) invert(23%) sepia(92%) saturate(7487%) hue-rotate(357deg) brightness(93%) contrast(115%);
 }
 
 header h1 a:hover,
 .dropdown:hover #dropBtn,
 nav ul li a:hover {
-  color: #e50914;
+    color: #e50914;
 }
 
 /* -------- SEÇÃO DE REGULAMENTO -------- */
@@ -162,7 +163,8 @@ nav ul li a:hover {
 
 /* Container de Tópicos */
 .topics-container {
-    text-align: center;       /* centraliza os cards na linha */
+    text-align: center;
+    /* centraliza os cards na linha */
     margin-bottom: 50px;
     font-size: 0
 }
@@ -172,22 +174,30 @@ nav ul li a:hover {
     background-color: #111;
     display: inline-block;
     vertical-align: top;
-    width: 48%;               /* duas colunas aproximadas */
-    box-sizing: border-box;   /* garante paddings sem quebrar largura */
-    margin: 10px 1% 20px;     /* controla espaçamento entre os cards */
+    width: 48%;
+    /* duas colunas aproximadas */
+    box-sizing: border-box;
+    /* garante paddings sem quebrar largura */
+    margin: 10px 1% 20px;
+    /* controla espaçamento entre os cards */
     background-color: #111;
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 0 20px rgba(229, 9, 20, 0.2);
     transition: 0.3s;
-    text-align: left;         /* conteúdo interno alinhado à esquerda */
-    min-height: 260px;        /* garante alturas uniformes — ajuste conforme necessário */
-    font-size: 16px;          /* restaura tamanho para conteúdo (porque container usa font-size:0) */
-    overflow: hidden;         /* evita que conteúdo “vaze” do card */
+    text-align: left;
+    /* conteúdo interno alinhado à esquerda */
+    min-height: 260px;
+    /* garante alturas uniformes — ajuste conforme necessário */
+    font-size: 16px;
+    /* restaura tamanho para conteúdo (porque container usa font-size:0) */
+    overflow: hidden;
+    /* evita que conteúdo “vaze” do card */
 }
 
 .topic-card .topic-content {
-    max-height: calc(100% - 70px); /* deixa espaço para ícone/título/link */
+    max-height: calc(100% - 70px);
+    /* deixa espaço para ícone/título/link */
     overflow: auto;
 }
 
@@ -368,6 +378,7 @@ nav ul li a:hover {
 
 /* Responsividade */
 @media (max-width: 1024px) {
+
     .footer-info,
     .footer-block {
         width: 45%;
@@ -402,23 +413,23 @@ nav ul li a:hover {
     header {
         padding: 0px 20px;
     }
-    
+
     .hero-banner {
         padding: 40px 20px;
     }
-    
+
     .hero-banner h2 {
         font-size: 32px;
     }
-    
+
     .topic-card {
         width: 90%;
         display: block;
         margin: 20px auto;
     }
-    
+
     .topic-icon {
         margin: 0 auto 15px auto;
     }
-    
+
 }

@@ -6,23 +6,23 @@
 }
 
 body {
-    background-color: #0a0a0a;
-    color: #fff;
+  background-color: #0a0a0a;
+  color: #fff;
 }
 
 header {
-    background-color: #111;
-    padding: 0px 15px;
-    height: 78px;
-    text-align: justify;
-    line-height: 70px;
-    border-bottom: 1px solid #222;
+  background-color: #111;
+  padding: 0px 15px;
+  height: 78px;
+  text-align: justify;
+  line-height: 70px;
+  border-bottom: 1px solid #222;
 }
 
 header::after {
-    content: "";
-    display: inline-block;
-    width: 100%;
+  content: "";
+  display: inline-block;
+  width: 100%;
 }
 
 .dropdown {
@@ -43,7 +43,7 @@ header::after {
 .dropdown .s-arrow {
   display: inline-block;
   margin-left: 6px;
-  transition: transform 0.3 ease;
+  transition: transform 0.5s ease;
 }
 
 .drop-menu {
@@ -128,12 +128,18 @@ nav ul li a:hover {
 
 :root {
   /* Paleta de Cores Dark Mode */
-  --bg-black: #000000;      /* Fundo principal preto */
-  --bg-dark-gray: #141414;  /* Fundo secundário (cards, sessões) */
-  --accent-red: #8b0000;    /* Cor de destaque (botões) */
-  --text-white: #ffffff;    /* Texto principal */
-  --text-gray: #b3b3b3;     /* Texto secundário (descrições) */
-  --border-color: #333333;  /* Bordas sutis */
+  --bg-black: #000000;
+  /* Fundo principal preto */
+  --bg-dark-gray: #141414;
+  /* Fundo secundário (cards, sessões) */
+  --accent-red: #8b0000;
+  /* Cor de destaque (botões) */
+  --text-white: #ffffff;
+  /* Texto principal */
+  --text-gray: #b3b3b3;
+  /* Texto secundário (descrições) */
+  --border-color: #333333;
+  /* Bordas sutis */
 }
 
 .content {
@@ -162,7 +168,8 @@ nav ul li a:hover {
   margin: 0 auto 50px auto;
   text-align: center;
   padding: 20px;
-  word-spacing: 10px; /* Espaço entre elementos inline-block */
+  word-spacing: 10px;
+  /* Espaço entre elementos inline-block */
 }
 
 .search-input {
@@ -177,8 +184,10 @@ nav ul li a:hover {
   /* Alinhamento inline-block */
   display: inline-block;
   vertical-align: middle;
-  word-spacing: normal; /* Reseta espaçamento interno */
-  margin-bottom: 10px; /* Margem para mobile se quebrar linha */
+  word-spacing: normal;
+  /* Reseta espaçamento interno */
+  margin-bottom: 10px;
+  /* Margem para mobile se quebrar linha */
 }
 
 .search-input::placeholder {
@@ -199,7 +208,8 @@ nav ul li a:hover {
   /* Alinhamento inline-block */
   display: inline-block;
   vertical-align: middle;
-  margin-left: 10px; /* Espaço manual */
+  margin-left: 10px;
+  /* Espaço manual */
 }
 
 .search-button:hover {
@@ -211,7 +221,8 @@ nav ul li a:hover {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-  font-size: 0; /* Remove espaço extra entre inline-blocks */
+  font-size: 0;
+  /* Remove espaço extra entre inline-blocks */
 }
 
 /* Card Individual */
@@ -225,7 +236,8 @@ nav ul li a:hover {
   overflow: hidden;
   vertical-align: top;
   text-align: center;
-  font-size: 16px; /* Restaura fonte */
+  font-size: 16px;
+  /* Restaura fonte */
   transition: transform 0.3s ease;
 }
 
@@ -306,14 +318,16 @@ nav ul li a:hover {
   padding: 40px;
   text-align: left;
   /* Clearfix para elementos float */
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .left {
   float: left;
-  width: 35%; /* Largura aproximada */
+  width: 35%;
+  /* Largura aproximada */
   min-width: 250px;
-  margin-right: 5%; /* Espaço entre colunas */
+  margin-right: 5%;
+  /* Espaço entre colunas */
 }
 
 .left img {
@@ -325,7 +339,8 @@ nav ul li a:hover {
 
 .right {
   float: left;
-  width: 60%; /* Ocupa o restante */
+  width: 60%;
+  /* Ocupa o restante */
 }
 
 .right h3 {
@@ -451,19 +466,20 @@ nav ul li a:hover {
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
-  
+
   /* About: Remove float para empilhar */
-  .left, .right {
+  .left,
+  .right {
     float: none;
     width: 100%;
     margin-right: 0;
     text-align: center;
   }
-  
+
   .left {
     margin-bottom: 20px;
   }
-  
+
   .right h3 {
     text-align: center;
   }
@@ -471,14 +487,16 @@ nav ul li a:hover {
   /* Filter Card: Empilha input e botão */
   .search-input {
     display: block;
-    margin: 0 auto 10px auto; /* Centraliza e dá margem */
+    margin: 0 auto 10px auto;
+    /* Centraliza e dá margem */
   }
-  
+
   .search-button {
     display: block;
-    margin: 0 auto; /* Centraliza */
+    margin: 0 auto;
+    /* Centraliza */
   }
-  
+
   .form-container,
   .info-sidebar {
     width: 100%;
@@ -495,7 +513,7 @@ nav ul li a:hover {
   footer {
     padding: 40px 20px 20px;
   }
-  
+
   .card-item {
     width: 90%;
     display: block;

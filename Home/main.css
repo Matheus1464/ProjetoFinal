@@ -42,9 +42,9 @@ header::after {
 }
 
 .dropdown .s-arrow {
-  display: inline-block;
-  margin-left: 6px;
-  transition: transform 0.3 ease;
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.5s ease;
 }
 
 .drop-menu {
@@ -75,7 +75,7 @@ header::after {
 }
 
 .dropdown.open .s-arrow {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 
@@ -481,6 +481,7 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
+
     .form-container,
     .info-sidebar {
         width: 100%;
