@@ -31,105 +31,104 @@ header::after {
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block;
-
+  position: relative;
+  display: inline-block;
+  /* Mantém ele no header sem quebrar layout */
 }
 
 #dropBtn {
-    background-color: #111;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-    transition: color 0.3s;
+  background-color: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.3s;
 }
 
-.dropdown .arrow {
-    display: inline-block;
-    margin-left: 6px;
-    transition: transform 0.3 ease;
+.dropdown .s-arrow {
+  display: inline-block;
+  margin-left: 6px;
+  transition: transform 0.3 ease;
 }
 
 .drop-menu {
-    display: none;
-    background: #1d1d1d;
-    position: absolute;
-    top: 85%;
-    left: 0;
-    width: 120%;
-    padding: 0;
-    list-style: none;
-    border-radius: 10px;
-    z-index: 10;
+  display: none;
+  background: #1d1d1d;
+  position: absolute;
+  top: 85%;
+  left: 0;
+  width: 110%;
+  padding: 0;
+  list-style: none;
+  border-radius: 10px;
+  z-index: 10;
 }
 
 .drop-menu li {
-    padding: 0 15px;
+  padding: 0 15px;
 }
 
 .drop-menu li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
-
+/* Quando abrir */
 .dropdown.open .drop-menu {
-    display: block;
+  display: block;
 }
 
-.dropdown.open .arrow {
-    transform: rotate(180deg);
+.dropdown.open .s-arrow {
+  transform: rotate(180deg);
 }
-
 
 header h1,
 nav {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
 }
 
 header h1 a {
-    font-size: 24px;
-    margin-left: 45px;
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
+  font-size: 24px;
+  margin-left: 45px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-left: 25px;
+  display: inline-block;
+  margin-left: 25px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 ul img {
-    display: inline-block;
-    vertical-align: middle;
-    width: 50px;
-    cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  cursor: pointer;
 }
 
 ul img:hover {
-    filter: brightness(0) saturate(100%) invert(23%) sepia(92%) saturate(7487%) hue-rotate(357deg) brightness(93%) contrast(115%);
+  filter: brightness(0) saturate(100%) invert(23%) sepia(92%) saturate(7487%) hue-rotate(357deg) brightness(93%) contrast(115%);
 }
 
 header h1 a:hover,
 .dropdown:hover #dropBtn,
 nav ul li a:hover {
-    color: #e50914;
+  color: #e50914;
 }
 
 :root {
@@ -157,7 +156,6 @@ nav ul li a:hover {
   background-color: var(--bg-black);
 }
 
-/* Área de Filtro/Busca (Sem Flexbox) */
 .filter-card {
   width: 100%;
   max-width: 980px;
@@ -169,7 +167,6 @@ nav ul li a:hover {
   margin: 0 auto 50px auto;
   text-align: center;
   padding: 20px;
-  /* Substituindo gap e flex */
   word-spacing: 10px; /* Espaço entre elementos inline-block */
 }
 
@@ -284,7 +281,6 @@ nav ul li a:hover {
   background: #a31515;
 }
 
-/* --- SEÇÃO SOBRE (ABOUT) - Sem Flexbox --- */
 .about {
   width: 100%;
   padding: 50px 10px;
@@ -319,7 +315,6 @@ nav ul li a:hover {
 }
 
 .left {
-  /* Substituindo flex por float */
   float: left;
   width: 35%; /* Largura aproximada */
   min-width: 250px;
@@ -334,7 +329,6 @@ nav ul li a:hover {
 }
 
 .right {
-  /* Substituindo flex por float */
   float: left;
   width: 60%; /* Ocupa o restante */
 }
@@ -354,7 +348,6 @@ nav ul li a:hover {
   color: var(--text-gray);
 }
 
-/* --- FOOTER - Sem Flexbox --- */
 footer {
   width: 100%;
   background: var(--bg-black);
@@ -378,7 +371,6 @@ footer .main {
 .footer-rental,
 .footer-contact,
 .footer-social {
-  /* Substituindo flex por inline-block */
   display: inline-block;
   vertical-align: top;
   width: 23%; /* 4 colunas com um pouco de folga */
@@ -420,7 +412,6 @@ footer .last {
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
-  /* Ajustes para mobile sem flexbox */
   
   /* About: Remove float para empilhar */
   .left, .right {
