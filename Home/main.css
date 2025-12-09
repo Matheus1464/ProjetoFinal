@@ -323,7 +323,7 @@ nav ul li a:hover {
 .flip-back {
     background-color: white;
     transform: rotateY(180deg);
-    padding: 30px;
+    padding: 150px 0;
     color: black;
     text-align: center;
 }
