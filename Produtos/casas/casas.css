@@ -127,162 +127,158 @@ nav ul li a:hover {
 }
 
 .houses-section {
-    padding: 50px;
-    margin: 0% 15% 5%;
+  padding: 50px;
+  margin: 0 auto 5%;
+  max-width: 1400px;
+  text-align: center;
+  --color-separator: #555;
 }
 
 .section-title {
-    text-align: center;
-    font-size: 2.2em;
-    color: var(--color-secondary);
-    margin-bottom: 40px;
-    padding-bottom: 10px;
-    position: relative;
-    letter-spacing: 1px;
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  position: relative;
+  letter-spacing: 1px;
 }
 
 .section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: var(--color-primary);
-    /* Sublinhado vermelho */
-    margin: 10px auto 0;
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background:red;
+  margin: 10px auto 0;
 }
 
 .houses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* Responsivo para 1 ou 2 colunas */
-    gap: 30px;
-    justify-content: center;
+  font-size: 0;
+  margin: 0 auto;
+  word-spacing: 30px;
+  text-align: center;
 }
 
 .house-card {
-    background-color: var(--color-card-background);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    /* Sombra suave */
-    transition: transform 0.3s;
+  display: inline-block;
+  width: 480px;
+  margin: 15px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  vertical-align: top;
+  font-size: 16px;
+  word-spacing: normal;
 }
 
 .house-card:hover {
-    transform: translateY(-5px);
-    /* Efeito sutil ao passar o mouse */
+  transform: translateY(-5px);
 }
 
 .house-image {
-    height: 220px;
-    background-color: #444;
-    /* Cor de fundo para simular a imagem, ajuste conforme a necessidade real */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-style: italic;
-    color: var(--color-text-light);
-    padding: 10px;
+  height: 220px;
+  text-align: center;
+  font-style: italic;
+  line-height: 200px;
 }
 
 .house-details {
-    padding: 20px;
+  padding: 20px;
+  background-color: #1d1d1d;
 }
 
 .house-title {
-    font-size: 1.3em;
-    color: var(--color-primary);
-    margin-bottom: 15px;
-    min-height: 50px;
-    /* Para manter a altura consistente entre os títulos */
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  min-height: 50px;
 }
 
 .price {
-    font-size: 1.8em;
-    font-weight: 700;
-    color: var(--color-secondary);
-    margin-bottom: 20px;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: red;
+  margin-bottom: 20px;
 }
 
-/* Detalhes de Despesas (IPTU/Condomínio) */
+/* Despesas */
 .expenses {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    background-color: #333333;
-    padding: 10px 15px;
-    border-radius: 4px;
-    margin-bottom: 20px;
+  background-color: #333333;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.expense-item-left {
+  float: left;
+  text-align: left;
+}
+
+.expense-item-right {
+  float: right;
+  text-align: right;
 }
 
 .expense-label {
-    font-size: 0.8em;
-    color: var(--color-text-light);
-    text-transform: uppercase;
+  font-size: 0.8em;
+  color: #999;
+  text-transform: uppercase;
 }
 
 .expense-value {
-    font-weight: 700;
-    color: var(--color-secondary);
+  font-weight: 700;
 }
 
-/* Lista de Recursos (Features) */
+/* Features */
 .features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 30px;
+  text-align: left;
+  margin-bottom: 30px;
+  word-spacing: 5px;
 }
 
 .feature {
-    background-color: #444444;
-    color: var(--color-text-light);
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.9em;
-    display: flex;
-    align-items: center;
+  background-color: #444444;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  display: inline-block;
+  margin: 5px 0;
 }
 
 .feature input[type="checkbox"] {
-    display: none;
-    /* Esconde o checkbox real */
+  display: none;
 }
 
 .feature label {
-    cursor: default;
+  color: #999;
+  cursor: default;
 }
 
-/* Botões de Ação */
+/* Botões */
 .actions {
-    display: flex;
-    gap: 15px;
-    padding-top: 10px;
-    border-top: 1px dashed var(--color-separator);
+  overflow: hidden;
+  padding-top: 10px;
+  border-top: 1px dashed var(--color-separator);
 }
 
 .btn {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    font-weight: 700;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s;
-    flex-grow: 1;
-    /* Para ocupar o espaço uniformemente */
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  float: left;
+  text-align: center;
+  color: white;
+  background-color: #1d1d1d;
+  width: calc(50% - 5px);
 }
 
-.btn-primary,
-.btn-secondary {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-}
-
-.btn-primary:hover,
-.btn-secondary:hover {
-    background-color: #e50914;
-    /* Um vermelho um pouco mais claro */
+.btn:hover {
+  background-color: #a31515;
 }
 
 
