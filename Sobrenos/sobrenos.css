@@ -1,135 +1,158 @@
+/* Reset básico para remover estilos padrões do navegador */
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* garante que padding e borda não expandam o tamanho total */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #0a0a0a;
+    /* fundo */
+    color: #fff;
+    line-height: 1.6;
 }
 
 header {
-  background-color: #111;
-  padding: 0px 15px;
-  height: 78px;
-  text-align: justify;
-  line-height: 70px;
-  border-bottom: 1px solid #222;
+    background-color: #111;
+    padding: 0px 15px;
+    height: 78px;
+    /* altura fixa */
+    text-align: justify;
+    line-height: 70px;
+    /* centraliza verticalmente o texto */
+    border-bottom: 1px solid #222;
 }
 
+/* alinhar o conteúdo usando inline-block */
 header::after {
-  content: "";
-  display: inline-block;
-  width: 100%;
+    content: "";
+    display: inline-block;
+    width: 100%;
 }
 
+/* container do menu suspenso */
 .dropdown {
-  position: relative;
-  display: inline-block;
-  /* Mantém ele no header sem quebrar layout */
+    position: relative;
+    /* posicionamento do menu dropdown internamente */
+    display: inline-block;
+
 }
 
+/* Botão que abre o dropdown */
 #dropBtn {
-  background-color: #111;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
-  transition: color 0.3s;
+    background-color: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: color 0.3s;
 }
 
+/* seta do dropbtn */
 .dropdown .s-arrow {
-  display: inline-block;
-  margin-left: 6px;
-  transition: transform 0.5s ease;
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.5s ease;
 }
 
+/* Lista do dropdown escondida */
 .drop-menu {
-  display: none;
-  background: #1d1d1d;
-  position: absolute;
-  top: 85%;
-  left: 0;
-  width: 110%;
-  padding: 0;
-  list-style: none;
-  border-radius: 10px;
-  z-index: 10;
+    display: none;
+    background: #1d1d1d;
+    position: absolute;
+    top: 85%;
+    left: 0;
+    width: 110%;
+    padding: 0;
+    list-style: none;
+    border-radius: 10px;
+    z-index: 10;
 }
 
 .drop-menu li {
-  padding: 0 15px;
+    padding: 0 15px;
 }
 
 .drop-menu li a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
-/* Quando abrir */
+/* Quando a classe .open é ativada o menu aparece */
 .dropdown.open .drop-menu {
-  display: block;
+    display: block;
 }
 
+/* Animação para quando aperta na flecha */
 .dropdown.open .s-arrow {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
+
 
 header h1,
 nav {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
 }
 
 header h1 a {
-  font-size: 24px;
-  margin-left: 45px;
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
+    font-size: 24px;
+    margin-left: 45px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-  display: inline-block;
-  margin-left: 25px;
+    display: inline-block;
+    margin-left: 25px;
 }
 
 nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
+/* Ícone de login */
 ul img {
-  display: inline-block;
-  vertical-align: middle;
-  width: 50px;
-  cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    cursor: pointer;
 }
 
 ul img:hover {
-  filter: brightness(0) saturate(100%) invert(23%) sepia(92%) saturate(7487%) hue-rotate(357deg) brightness(93%) contrast(115%);
+    filter: brightness(0) saturate(100%) invert(23%) sepia(92%) saturate(7487%) hue-rotate(357deg) brightness(93%) contrast(115%);
 }
 
+/* Efeito passar mouse em cima vermelho */
 header h1 a:hover,
 .dropdown:hover #dropBtn,
 nav ul li a:hover {
-  color: #e50914;
+    color: #e50914;
 }
 
+/* SEÇÃO SOBRE NÓS */
 .sobre {
   width: 100%;
   padding: 125px 0 100px 20px;
-  min-height: calc(100vh - 134px);
+  min-height: calc(100vh - 134px); /* ocupa a tela menos header */
   background-color: #191919;
   text-align: center;
   position: relative;
 }
 
+/* Container central da seção */
 .sobrenos {
   position: relative;
   width: 90%;
@@ -138,6 +161,7 @@ nav ul li a:hover {
   text-align: center;
 }
 
+/* Cada card escondido */
 .card {
   display: none;
   width: 100%;
@@ -146,39 +170,36 @@ nav ul li a:hover {
   animation: fadeIn 0.6s ease-in-out;
 }
 
+/* O card ativo vira uma tabela para alinhar imagem + texto */
 .card.active {
   display: table;
   width: 97%;
   margin: 0 auto;
-  table-layout: fixed;
-  /* evita que o conteúdo quebre o layout */
+  table-layout: fixed; /* impede quebra do layout */
   animation: fadeIn 0.6s ease-in-out;
 }
 
+/* Deixa a imagem e o texto lado a lado */
 .card.active>img,
 .card.active>.sobre-text {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: middle; /* centraliza verticalmente */
   margin: 30px;
 }
 
 .card.active>img {
   border-radius: 20px;
   width: 400px;
-  /* mantém o tamanho máximo desejado */
-  max-width: 100%;
-  /* garante responsividade em telas estreitas */
+  max-width: 100%; /* responsividade */
   padding-right: 0px;
   box-sizing: border-box;
 }
 
-/* garante que o bloco de texto ocupe o restante */
+/* Texto ao lado da imagem */
 .card.active>.sobre-text {
-  width: 56%;
-  /* ocupa o espaço restante */
+  width: 56%; /* ocupa o espaço restante */
   text-align: left;
 }
-
 
 .sobre-text h2 {
   color: lightgrey;
@@ -201,10 +222,12 @@ nav ul li a:hover {
   font-family: "Josefin Sans", sans-serif;
 }
 
+/* Destalhe rosa */
 .c-span {
   color: #f9004d;
 }
 
+/* Icones das midias sociais */
 .social {
   width: 100%;
   text-align: center;
@@ -225,22 +248,17 @@ nav ul li a:hover {
   transition: transform 0.3s;
 }
 
+/* Animação ao passar o mouse nos icones */
 .social a:hover img {
   filter: brightness(1.2);
   transform: scale(1.15);
 }
 
-.social a {
-  color: inherit !important;
-}
 
-.social a:hover {
-  color: inherit !important;
-}
-
+/* Setas do Slider */
 .arrow {
   position: absolute;
-  top: 50%;
+  top: 50%; /* centraliza verticalmente */
   transform: translateY(-50%);
   background: none;
   border: none;
@@ -248,7 +266,7 @@ nav ul li a:hover {
   font-size: 40px;
   cursor: pointer;
   transition: 0.3s;
-  z-index: 10;
+  z-index: 10; /* fica acima das imagens */
 }
 
 .arrow:hover {
@@ -263,6 +281,7 @@ nav ul li a:hover {
   right: 0px;
 }
 
+/* Animação suave ao trocar de card */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -275,7 +294,7 @@ nav ul li a:hover {
   }
 }
 
-/* -------- FOOTER -------- */
+/* FOOTER */
 .footer {
   background-color: #111;
   color: #bbb;
@@ -291,7 +310,7 @@ nav ul li a:hover {
   border-bottom: 1px solid #333;
 }
 
-/* BLOCO PRINCIPAL */
+/* Colunas do footer */
 .footer-info,
 .footer-block {
   display: inline-block;
@@ -372,7 +391,7 @@ nav ul li a:hover {
 
   .footer-info,
   .footer-block {
-    width: 45%;
+    width: 45%; /* reorganiza colunas */
     margin-bottom: 25px;
   }
 
@@ -383,9 +402,9 @@ nav ul li a:hover {
 
 @media (max-width: 850px) {
 
+  /* Empilha imagem e texto no card */
   .card.active {
     display: block;
-    /* empilha os elementos */
     width: 95%;
     padding: 0 10px;
   }
@@ -411,6 +430,7 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
 
+  /* Ajustes gerais */
   .form-container,
   .info-sidebar {
     width: 100%;

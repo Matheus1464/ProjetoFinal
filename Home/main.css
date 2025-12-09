@@ -1,12 +1,15 @@
+/* Reset básico para remover estilos padrões do navegador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* garante que padding e borda não expandam o tamanho total */
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     background-color: #0a0a0a;
+    /* fundo */
     color: #fff;
     line-height: 1.6;
 }
@@ -15,23 +18,29 @@ header {
     background-color: #111;
     padding: 0px 15px;
     height: 78px;
+    /* altura fixa */
     text-align: justify;
     line-height: 70px;
+    /* centraliza verticalmente o texto */
     border-bottom: 1px solid #222;
 }
 
+/* alinhar o conteúdo usando inline-block */
 header::after {
     content: "";
     display: inline-block;
     width: 100%;
 }
 
+/* container do menu suspenso */
 .dropdown {
     position: relative;
+    /* posicionamento do menu dropdown internamente */
     display: inline-block;
 
 }
 
+/* Botão que abre o dropdown */
 #dropBtn {
     background-color: #111;
     color: white;
@@ -41,12 +50,14 @@ header::after {
     transition: color 0.3s;
 }
 
+/* seta do dropbtn */
 .dropdown .s-arrow {
     display: inline-block;
     margin-left: 6px;
     transition: transform 0.5s ease;
 }
 
+/* Lista do dropdown escondida */
 .drop-menu {
     display: none;
     background: #1d1d1d;
@@ -69,11 +80,12 @@ header::after {
     text-decoration: none;
 }
 
-
+/* Quando a classe .open é ativada o menu aparece */
 .dropdown.open .drop-menu {
     display: block;
 }
 
+/* Animação para quando aperta na flecha */
 .dropdown.open .s-arrow {
     transform: rotate(180deg);
 }
@@ -111,6 +123,7 @@ nav ul li a {
     transition: color 0.3s;
 }
 
+/* Ícone de login */
 ul img {
     display: inline-block;
     vertical-align: middle;
@@ -122,12 +135,14 @@ ul img:hover {
     filter: brightness(0) saturate(100%) invert(23%) sepia(92%) saturate(7487%) hue-rotate(357deg) brightness(93%) contrast(115%);
 }
 
+/* Efeito passar mouse em cima vermelho */
 header h1 a:hover,
 .dropdown:hover #dropBtn,
 nav ul li a:hover {
     color: #e50914;
 }
 
+/* Carrossel + texto principal */
 .hero {
     position: relative;
     width: 100%;
@@ -136,15 +151,19 @@ nav ul li a:hover {
     color: #fff;
 }
 
+/* texto sobre as imagens */
 .hero-content {
     position: absolute;
     inset: 0;
+    /* ocupa toda a área */
     text-align: center;
     color: white;
     background: rgba(0, 0, 0, 0.35);
+    /* leve escurecimento */
     padding: 20px;
     border-radius: 10px;
     z-index: 2;
+    /* fica acima das imagens */
 }
 
 .hero-content h2 {
@@ -175,30 +194,37 @@ nav ul li a:hover {
     background-color: #b0060f;
 }
 
+/* Carrossel */
 .carousel {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    /* centraliza */
     width: 80%;
     height: 100%;
     overflow: hidden;
     border-radius: 20px;
 }
 
+/* Faixa que desliza com as imagens */
 .carousel-track {
     white-space: nowrap;
+    /* imagens lado a lado */
     font-size: 0;
     width: 100%;
     height: 100%;
     animation: slide 15s linear infinite;
+    /* animação de slide contínua */
 }
 
+/* Imagens do carrossel */
 .carousel-track img {
     display: inline-block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* ocupa o card corretamente */
     object-position: center;
 }
 
@@ -213,37 +239,8 @@ nav ul li a:hover {
     }
 }
 
-/* 🔹 Responsividade */
-@media (max-width: 787px) {
 
-    header {
-        padding: 0 20px;
-    }
-
-    header h1 a {
-        font-size: 1.1rem;
-    }
-
-    nav ul li {
-        font-size: 0.6rem;
-        margin-left: 15px;
-    }
-
-    .hero-content h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero-content p {
-        font-size: 0.67rem;
-        padding: 0 10px;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-}
-
+/* cards */
 .cards {
     text-align: center;
     padding: 50px;
@@ -263,10 +260,11 @@ nav ul li a:hover {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     color: inherit;
-    /* animações suaves */
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+    /* animações suaves */
 }
 
+/* Aumenta o card ao passar o mouse */
 .card:hover {
     /* aumenta levemente o tamanho do card */
     transform: scale(1.07);
@@ -293,8 +291,10 @@ nav ul li a:hover {
     color: #ccc;
 }
 
+/* efeito flip */
 .flip-card {
     perspective: 1000px;
+    /* cria profundidade 3D */
     display: inline-block;
 }
 
@@ -304,9 +304,11 @@ nav ul li a:hover {
     height: 100%;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    /* mantém faces 3D */
     border-radius: 30px;
 }
 
+/* Gira o card ao passar o mouse */
 .flip-card:hover .flip {
     transform: rotateY(180deg);
 }
@@ -318,14 +320,15 @@ nav ul li a:hover {
     backface-visibility: hidden;
     border-radius: 30px;
     overflow: hidden;
+    /* evita que a face de trás apareça espelhada */
 }
 
+/* Parte de trás do card */
 .flip-back {
     background-color: white;
     transform: rotateY(180deg);
     padding: 150px 0;
     color: black;
-    text-align: center;
 }
 
 .card .flip-back p {
@@ -368,15 +371,13 @@ nav ul li a:hover {
 .texto-justificado {
     text-align: justify;
     max-width: 800px;
-    /* ajuste como preferir */
     margin: 0 auto;
-    /* centraliza o bloco na página */
     line-height: 1.6;
-    /* melhora a leitura */
 }
 
-
 /* FOOTER */
+
+/* estrutura geral do rodapé */
 .footer {
     background-color: #111;
     color: #bbb;
@@ -449,10 +450,10 @@ nav ul li a:hover {
     display: inline-block;
 }
 
-
+/* Efeito de "deslocamento" nos links */
 .footer-block a:hover {
     color: #e50914;
-    transform: translateX(5px);
+    transform: translateX(px);
 }
 
 /* COPYRIGHT */
@@ -480,6 +481,36 @@ nav ul li a:hover {
     }
 }
 
+@media (max-width: 787px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    header h1 a {
+        font-size: 1.1rem;
+    }
+
+    nav ul li {
+        font-size: 0.6rem;
+        margin-left: 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.67rem;
+        padding: 0 10px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
 @media (max-width: 768px) {
 
     .form-container,
@@ -499,3 +530,4 @@ nav ul li a:hover {
         padding: 40px 20px 20px;
     }
 }
+
